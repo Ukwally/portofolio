@@ -1062,11 +1062,10 @@
                             <input type="hidden" name="_subject" value="Novo envio:CONTRATAR">
                             <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
                             <input type="hidden" name="_captcha" value="false">
-                            <input name="nome" type="text" required placeholder="Nome da Empresa"></input>
-                            <input name="nif" type="text" placeholder="NIF da Empresa (opcional)"></input>
-                            <input name="agente" type="text" required placeholder="Nome do Agente Contratante"></input>
-                            <input name="contacto" type="number" required placeholder="Contacto do empregador"></input>
-                            <input name="email" type="email" placeholder="E-mail do Empregador"></input>
+                            <input name="nome" type="text" required placeholder="Empresa"></input>
+                            <input name="agente" type="text" required placeholder="Nome do recrutador"></input>
+                            <input name="contacto" type="number" required placeholder="Contacto do recrutador"></input>
+                            <input name="email" type="email" placeholder="E-mail do recrutador"></input>
                         </div>
                         <!--label for="textarea">(Opcional)</label-->
                         <textarea class="textArea" name="mensagem" rows="6"
@@ -1115,15 +1114,15 @@
             </div>
             <div id="dialog-body">
                 <h2>Escreva um e-mail para <b>Ukwally</b>!...</h4>
-                    <form action="https://formsubmit.co/ukwallyportfolio@gmail.com" name="frmemailcontratar">
+                    <form action="https://formsubmit.co/ukwallyportfolio@gmail.com" name="frmemailcontratar" method="POST">
                         <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
                         <input type="hidden" name="hiddeEnviarEmail" value="TITULO EMAIL ENVIADO PARA UKWALLY">
                         <input type="hidden" name="_subject" value="Novo envio:Email">
                         <input type="hidden" name="_captcha" value="false">
                         <label for="nome"><small>Nome:</small></label>
-                        <input type="text" id="nome" name="nome" required>
+                        <input type="text" name="nome" required>
                         <label for="email"><small>E-mail:</small></label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" name="email" required>
                         <label for="mensagem"><small>Mensagen:</small></label>
                         <textarea id="mensagem" name="mensagem" required rows="6"></textarea>
                         <div><button class="dialog-button" type="submit">Enviar</button></div>

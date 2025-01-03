@@ -13,7 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function showMenu(){ document.getElementById('section-left').classList.toggle('hidden');}
+function showMenu(){ 
+    window.scrollTo({
+        top: 0, // A posição desejada (0 significa topo)
+        behavior: 'smooth' // Animação suave
+    });
+    document.getElementById('section-left').classList.toggle('hidden');
+}
 //DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
 function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">Fácil<span>';setTimeout("trocar2()", 2000)}
 function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">Eficaz<span>';setTimeout("trocar3()", 2000)} 

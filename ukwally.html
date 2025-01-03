@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukwally</title>
+    <link rel="stylesheet" href="./style/ukwally.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y3YJJPJKW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3Y3YJJPJKW');
+    </script>
+</head>
+<body>
+    <div id="nitidez" class="nitidar"></div>
+    <div id="info"><p id="info-text" class="show-info-text info-set"><strong>Este corricolo não é completo !</strong><br> <br>
+        Para um corricolo completo você precisa <b style="font-weight: 500;">Contactar</b> ukwally</p>
+        <div onclick="showInfo()"> <p class="info-icon info-set" id="open-info"  onclick="nitidar()"><span>&#105</span></p> <p class="info-icon info-set show-info-text" id="close-info" onclick="nitidar()"><span>&#120</span></p></div>
+    </div>
+    <div id="sheet">
+        <div id="div-buttons"><a class="buttons" id="bt_left" href="index.html">Voltar</a><a class="buttons" id="bt_rigth" href="index.html#bt_contratar">Contratar</a></div>
+          <!--a-- href="outra-pagina.html#id-do-elemento">Ir para o conteúdo na outra página</!--a-->
+        <h1>Ukwally</h1> 
+        <h2>Algumas Formações:</h2>
+        <h3>1- Formação média técnica:</h3>
+        <p>
+        Desenhador Projetista <br>
+        <!--span-- class="shorter">(IPER-Instituto Polivalente Edik Ramon – 2015 / Colégio Madrugada - 2016 - 2017)</!--span-->
+        </p>
+        <h3>2- Formação profissional:</h3>
+        <p>
+        Pedagogia Geral + Didática <br>
+        <!--span-- class="shorter">(Centro de formação profissional Visão Juvenil - 2020)</!--span-->
+        </p>
+        <h3>3- Formação profissional:</h3>
+        <p>
+        Programação Web: <br>
+        <!--span-- class="shorter">(Unitel - 2022)</!--span-->
+        </p>
+        <h3>4- Formação superior:</h3>
+        <p>
+        Engenharia Informática <br>
+        <!--span-- class="shorter">(ISPAJ-Instituto Superior Politécnico Alvorecer da Juventude – 2022/2023)</!--span-->
+        </p>
+        <div class="barr"></div>
+        <h2>Algumas Ferramentas</h2>
+        <p class="bold" style="color: rgb(57, 110, 156);">Node | Laravel | Laravel Livewire | HTML | CSS </p>
+        <p class="bold" style="color: rgb(41, 79, 112);">React.js | React Native | Expo | React.Js | Wordpress </p>
+        <p class="bold" style="color: rgb(22, 44, 61);">PHP | MySql | SQL | Python | Kivy | Git | GitHub |  JavaScript </p>
+        <div class="barr"></div>
+        <h2>Alguns Conhecimentos</h2>
+        <p><span class="bold">BPM</span>(Business Process Model)</p>
+        <p>Design gráfico</p>
+        <p>Automação</p>
+        <p>Programação</p>
+        <p>Redes de Computadores</p>
+        <p>Administração de Banco de dados</p>
+        <p>Big Data</p>
+        <p>Análise de dádos</p>
+        <div class="barr"></div>
+        <!--h2>Softwares:</!--h2>
+        <p><span class="bold">Adobe:</span> Photoshop;</p>
+        <p><span class="bold">Microsoft:</span>PowerPoint, Excel, Access, Outlook, Project</p>
+        <div class="barr"></div>
+        <h4>Línguas</h4>
+        <p>Inglês</p>
+        <p>Lingala</p>
+        <p>Português</p>
+        <div-- class="barr"></div-->
+        <h2>Habilitações Profissionais:</h2>
+        <p class="bold">1-DBA <span class="shorter">(Administração de Banco de Dados)</span></p>
+        <p class="bold">2-Serviço técnico de softweres</p>
+        <p class="bold">3-Reparação e manutenção de computadores</p>
+        <p class="bold">4-Gestão de Redes de computadores</p>
+        <div class="barr"></div>
+
+        <h2>Experiências profissionais:</h2>
+        <h3>1-Desenvolvedor web</h3>                                            
+        <p>
+        Criação e desenvolvimento de websites, acompanhando as  diversas fases nomeadamente: <br>
+        levantamento de requisitos, análise funcional, desenvolvimento, testes, entre outros. <br>
+        <span class="shorter">9/2022- Presente</span>
+        </p>
+        <h3>2-Avaliação de software</h3> 
+        <p>
+        Esperiência académica de  Analise crítica de software concreto do no mercado real. <br>
+        <span class="shorter">2 /1/23 – 5 /2/23</span> 
+        </p>
+        <h3>3-Desenvolvedor de softwares</h3>                                            
+        <p>
+        Membro da equipe de desenvolvimento de softwares da empresa GESTDOC <br>
+        <span class="shorter">8/3/2014- 23/9/2024</span>
+        </p>
+
+        <a class="buttons" id="bt_imprimir" onclick="window.print()" href="./doc/CV.Ukwally.pdf"> Imprimir</a>
+       <div id="footer"> <p>2023, Ukwally</p></div>
+
+    </div>  
+    <script>
+        function showInfo(){
+            document.getElementById('open-info').classList.toggle('show-info-text');
+            document.getElementById('close-info').classList.toggle('show-info-text');
+            document.getElementById('info-text').classList.toggle('show-info-text');
+            document.getElementById('sheet').classList.toggle('nitidez');
+            setTimeout()
+            }
+
+        function nitidar(){document.getElementById('nitidez').classList.toggle('nitidar')}
+    </script>  
+</body>
+
+</html>

@@ -196,8 +196,6 @@ function mostrarDialogo3(){document.getElementById('dialogo3').showModal();}
 function fecharDialogo3(){document.getElementById('dialogo3').close()}
 function mostrarDialogo4(){document.getElementById('dialogo4').showModal();}
 function fecharDialogo4(){document.getElementById('dialogo4').close();}
-function mostrarDialogo5(){document.getElementById('dialogo5').showModal();}
-function fecharDialogo5(){document.getElementById('dialogo5').close();}
 function mostrarDialogo6(){document.getElementById('dialogo6').showModal();}
 function fecharDialogo6(){document.getElementById('dialogo6').close();}
 

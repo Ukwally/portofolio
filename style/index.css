@@ -1,3 +1,4 @@
+/*BUGs: rever o mydiaquery do footer fixo*/
 :root{
     --blueBox:#a8b6c12f;
     --blueMain:#99b0d0;
@@ -45,7 +46,7 @@
     width: 100%;
     height: 53%;
     position: absolute;
-    top:19%;
+    top:118px;
     z-index:5;
 }
 #div-left-top
@@ -95,6 +96,7 @@
     #section-left{position: fixed;width:12%;height:87%;z-index: 0;/* removed top:13%;metodo delta*/ display: block;} 
     #div-left-button{height: 40%; flex-direction: column;justify-content: space-around;}
     .button-left{ height: 12%; font-size: large;}
+    .smalltxtmenu{ display:none!important;}
     /*.hidden{display: block;}*/
 }
 /*------------------------------------
@@ -104,7 +106,7 @@
 /*--------------------------------
     INICIO DO CABECARIO
 ---------------------------------*/
-#header{background-color:#216f86;/*deleted height 13% metodo delta height: 200px;*/ }
+#header{background-color:#216f86;/*deleted height 13% metodo delta height: 200px;*/ height: 96px; }
 #name{margin-left: 2%; margin-top:0;margin-bottom:0;font-size: xx-large; color:rgb(188, 212, 214); font-family: Impact, 'Arial Narrow Bold';}
 #barr{background:linear-gradient(to right, rgba(0, 126, 174, .85), rgba(26, 193, 187, .85));/*background-color:rgb(67, 116, 161)*/;height: 10px; /*replaced 10% by 10px metodo delta*/ width: 40%;}
 #underbarr{display: flex;justify-content:space-between; box-sizing: border-box; object-fit: cover;}
@@ -126,6 +128,8 @@ font-weight: bold;}
     z-index: 6;
     width: 100%;
     display: flex;
+    height: 21px;
+    align-items: center;
     justify-content: end; 
     box-shadow: 0px 1px 4px #6d7d86;
     transition: padding 0.5s;
@@ -198,16 +202,17 @@ font-weight: bold;}
 }
 /* FIM DO MOVIMENTO DO VERTIVAL  BANNER*/
 #div-banner h5{z-index: 2;position: absolute; left:10%;font-size: 30px; color:rgb(160, 173, 171);}
-#div-banner h1{z-index: 2;position: absolute; left:10%;font-size: 40px; color:rgb(71, 71, 71); margin-right: 4%;}
-#div-banner p{ z-index: 2;position: absolute; top:34%;left:10%;right: 10%; font-size: 20px; color:rgb(120, 161, 155);}
+#div-banner h1{z-index: 2;position: absolute; left:10%;font-size: 40px; color:rgb(69, 78, 85); margin-right: 4%;}
+#div-banner p{ z-index: 2;position: absolute; top:221px;left:10%;right: 10%; font-size: 20px; color:rgb(120, 161, 155);}
 @keyframes mudarCor{ from{color:#a0adab} to{color:#cadbd9;}}
 .subtBanner{
     animation: mudarCor 1s infinite;
-}   
+}  
+
 /*codigo para fazer o breack do texto de banner quando a tela é acima de 1024px para que uma parte no texto não fique
     em cima da imagem visto que acima de 1024px o div-banner ocupa apenas 500px e abaixo de 1024 ocupa 100% e o texto todo fica encima da imagem sem problema estético*/
 @media only screen and (max-width:1200px) and (min-width:1024px){
-    #div-banner p{ width: 250px; top:38%;}
+    #div-banner p{ width: 250px;}
     .bannerTxtBr{display: block;}/* remover isto do javaScript e arranjar forma limpa*/
 }
 @media only screen and (max-width:1300px) and (min-width:1200px){
@@ -215,6 +220,9 @@ font-weight: bold;}
 }
 @media only screen and (max-width:1600px) and (min-width:1300px){
     #div-banner p{ width: 490px;}
+}
+@media only screen and (min-width:800px){
+    #div-banner p{top:250px;}
 }
 /* Fim do codigo para fazer o breack do texto de banner quando a tela é acima de 1024px para que uma parte no texto não fique
     em cima da imagem visto que acima de 1024px o div-banner ocupa apenas 500px e abaixo de 1024 ocupa 100% e o texto todo fica encima da imagem sem problema estético*/
@@ -235,7 +243,7 @@ font-weight: bold;}
     font-weight: bold;
     color:rgb(88, 88, 88);
     top: 60%;
-    background-color:#f7f7f74d;
+    background-color:#f7f7f75e;
 }
 .btBefore:hover,.BtNext:hover{ background-color:#007ea125;}
 .btBefore{ left:10%;}
@@ -245,8 +253,8 @@ font-weight: bold;}
     .BtNext{right: 65%;}
 }
 @media only screen and (max-width:1023px) and (min-width:300px){
-    .btBefore{ left:6%; top:50%}
-    .BtNext{right: 6%; top:50%}
+    .btBefore{ left:6%; top:52%}
+    .BtNext{right: 6%; top:52%}
 }
 
 #txt_Benvindo{color:#485d69; text-align: center; margin: 5%; font-weight:700;font-size:xx-large;}
@@ -742,18 +750,17 @@ font-size: 26px;
     #div-hate{margin-right: 5px;}
     .likehate svg{width: 40px; height: 40px; fill:transparent; stroke:var(--greyB); stroke-width: 1.7px;}
     .likehate p{font-size: 13px; box-sizing: border-box;font-weight: 800; color:#00566e;}
-    .svg-hate{fill: #00566e; transform:rotate(180deg)}
-    #footer-around{width:30%;}
+    .svg-hate{transform:rotate(180deg)}
     /* INICIO MESSAGE BOX MESSAGE BOX*/
     #div-message{
         background-color: #ffffff;
-        height: 300%;
+        height: 110px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 4px;
-        border:solid rgb(13, 116, 109) 2px;
+        border:solid rgb(154, 194, 201) 2px;
         box-sizing: border-box;
         position:absolute;
         left: 0;
@@ -761,10 +768,10 @@ font-size: 26px;
         margin: 0;
         z-index: 10;
     }
-    #div-message .message-icon {height: 100%;width:10%;margin-left:1%;}
+    #div-message .message-icon {height: 100%;max-width:35px;margin-left:1%;}
     #div-message .message-icon img{max-width: 100%;max-height:100%;}
     #div-message textarea{
-        width: 80%;
+        width: 70%;
         height: 90%;
         margin-left:0;
         margin-top: 2;
@@ -778,6 +785,7 @@ font-size: 26px;
         /*border-top: 1px solid #58676b69;
         box-shadow: 0px 0px 7px 0px #58676b69*/;
     }
+    .message-button{ background-color: #5f9fb148; border: 2px solid rgb(243, 246, 248);box-sizing: border-box; object-fit: cover;}
     #message-head{color:#f9fbfc;
         position:absolute;
         z-index: 10;
@@ -798,7 +806,6 @@ font-size: 26px;
     /* FIM MESSAGE BOX MESSAGE BOX*/
     /* INICIO FOTER RIGHT*/
     #footer-rigth{
-        width: 30%;
         display: flex;
         justify-content: space-around;
     }
@@ -819,13 +826,14 @@ font-size: 26px;
     @media only screen and (min-width:1024px){
     #top-site{ height: 60px;width: 60px;  bottom:20%; right:12px;}
     #share-site{right:1.8%;}
+    #footer-left{width: 12%;}
     #footer-around{width:73%;}
     #footer-rigth{width: 15%;}
     .likehate{margin-left:0; margin-right: 0;}
     #breakFooterTxt{display:none;}
     #message-head{width: 28.5%;}
     #div-message{height: 90%;width: 40%;display: flex;justify-content: space-between;position:static;left: 0;margin: 0;box-sizing: content-box;}
-    #div-message #messagebox{width: 22%;position:absolute;height: 90%;bottom: 2; margin-left: 3%; background-color: white; outline-style: none!important;}
+    #div-message #messagebox{width: 22%;position:absolute;height: 90%;bottom: 2; margin-left: 4%; background-color: white; outline-style: none!important;}
     #mensagem_button{position:fixed;bottom:0%;height:40px;width: 40px; left:82%; z-index:3; display: none;}
     }
     @media only screen and (min-width:1500px){
@@ -834,7 +842,7 @@ font-size: 26px;
         #footer-rigth{width: 15%;}
         #message-head{width: 23.5%;}
         #div-message{height: 90%;width: 32%;}
-        #div-message #messagebox{width: 18%;}   
+        #div-message #messagebox{width: 18%; margin-left: 2.5%;}   
     }
      /*inicio do midea query do footer fixo*/   
     /*-----------------------------------------------

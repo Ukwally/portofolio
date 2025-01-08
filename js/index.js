@@ -20,20 +20,21 @@ function showMenu(){
     });
     document.getElementById('section-left').classList.toggle('hidden');
 }
-//DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
-function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">Fácil<span>';setTimeout("trocar2()", 2000)}
-function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">Eficaz<span>';setTimeout("trocar3()", 2000)} 
-function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">Rápida<span>';setTimeout("trocar1()", 2000)}
+//INICIO DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
+function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">Fácil<span>';setTimeout("trocar2()", 2000);}
+function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">Eficaz<span>';setTimeout("trocar3()", 2000);} 
+function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">Rápida<span>';setTimeout("trocar1()", 2000);}
+
  //function Aumeuntarpjnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum1');setTimeout("Reduzirpjtnum()",500);}   
- //function Reduzirpjtnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum2');setTimeout("Aumeuntarpjnum()",500);}   
+ //function Reduzirpjtnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum2');setTimeout("Aumeuntarpjnum()",500);}  
 
 /*
     //OPÇÃO1
-//function trocartxt(){const tspan=document.querySelectorAll('txtdinamico'); tspan.forEach(mostrar);}
-//function mostrar(iten){document.getElementById('demo').innerHTML=iten.innerHTML;}
+    //function trocartxt(){const tspan=document.querySelectorAll('txtdinamico'); tspan.forEach(mostrar);}
+    //function mostrar(iten){document.getElementById('demo').innerHTML=iten.innerHTML;}
     //OPÇÃO2
-//const txts=["rapida", "eficaz","facil"];
-//for (i=0; i <txts.length; i++){ document.getElementById('demo').innerHTML=txts[i]; setInterval(3000);}
+    //const txts=["rapida", "eficaz","facil"];
+    //for (i=0; i <txts.length; i++){ document.getElementById('demo').innerHTML=txts[i]; setInterval(3000);}
 
     //OPÇÃO3   
     const txts=document.querySelectorAll('txtdinamico');
@@ -42,6 +43,7 @@ function trocar3(){document.getElementById('textoDinamico').innerHTML='<span sty
        function visibilizar(){this.classList.toggle('invisivel');}
 
 */
+//FIM DO TEXTO DINÁMICO
 
 /*-------------------------------------------
      INICIO PESQUISAR POR PROJECTOS EM MINICARDS
@@ -96,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*-------------------------------------------
      FIM PESQUISAR POR PROJECTOS EM MINICARDS
 --------------------------------------------*/
-
-
 
 /*------------------------------------------------
     INICIO SLIDE DE PROJECTOS INTEGRADOS VISÃO MAIOR 
@@ -233,8 +233,6 @@ function resize(){
             messageHead.classList.add('hidden');
         }
     });
-
-    
 
 }
 function hide_Message_Head(){
@@ -423,9 +421,3 @@ startSlides();
 /**-----------------------------
  * FIM BANNER SLIDE
  --------------------------------*/
-
-
-//PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS
-//PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS
-//PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS PAGINA DE COMPRAS
-function mostrarCarrinho(){document.getElementById('carrinho').style.display="block"}

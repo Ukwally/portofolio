@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function showMenu(){ 
     window.scrollTo({
-        top: 0, // A posição desejada (0 significa topo)
-        behavior: 'smooth' // Animação suave
+        top: 0,
+        behavior: 'smooth'
     });
     document.getElementById('section-left').classList.toggle('hidden');
 }
 //INICIO DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
-function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">Fácil<span>';setTimeout("trocar2()", 2000);}
-function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">Eficaz<span>';setTimeout("trocar3()", 2000);} 
-function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">Rápida<span>';setTimeout("trocar1()", 2000);}
+function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">fácil<span>';setTimeout("trocar2()", 2000);}
+function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">eficaz<span>';setTimeout("trocar3()", 2000);} 
+function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">rápida<span>';setTimeout("trocar1()", 2000);}
 
  //function Aumeuntarpjnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum1');setTimeout("Reduzirpjtnum()",500);}   
  //function Reduzirpjtnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum2');setTimeout("Aumeuntarpjnum()",500);}  
@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 /*-------------------------------------------
      FIM PESQUISAR POR PROJECTOS EM MINICARDS
 --------------------------------------------*/
@@ -124,6 +125,8 @@ function extender(valor){
     var readme = ['readme-orkazy','readme-lucar','readme-portfolio-ukwally','readme-uninet','readme-finnet'];
 }
 
+
+// INICIO FILTRAR PROJECTOS 
 let currentProjectIndex = 0;
 let filteredProjects = [];
 const allProjects = document.querySelectorAll('.project');
@@ -169,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*--------------------------------------------------
-    INICIO SLIDE DE PROJECTOS INTEGRADOS VISÃO MAIOR 
+    FIM SLIDE DE PROJECTOS INTEGRADOS VISÃO MAIOR 
 -------------------------------------------------*/
 
 

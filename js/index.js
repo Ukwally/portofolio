@@ -273,7 +273,7 @@ function slide1(){
     function slide2(){
     document.getElementById('bannerp').src="./img/dev2.jpg";
     document.getElementById('bannerp').classList.toggle('desaparecer');
-    document.getElementById('bannertxt').innerHTML='Tutorias '+' <style="display:none;" class="bannerTxtBr"br>'+' Solidas';
+    document.getElementById('bannertxt').innerHTML='Tutoriais'+' <style="display:none;" class="bannerTxtBr"br>'+' Sólidos';
     document.getElementById('bannertxt').classList.add('aparecerY'); //adiciona a class aparecerY
     setTimeout(() => {
         document.getElementById('bannertxt').classList.remove('aparecerY')
@@ -321,7 +321,7 @@ function slide1(){
     function slide6(){
     document.getElementById('bannerp').src="./img/dev6.jpg";
     document.getElementById('bannerp').classList.toggle('sombra');
-    document.getElementById('bannertxt').innerHTML='Assistencia '+ '<style="display:none;" class="bannerTxtBr"br>'+' tecnica';
+    document.getElementById('bannertxt').innerHTML='Assistência'+ '<style="display:none;" class="bannerTxtBr"br>'+' tecnica';
     document.getElementById('bannertxt').classList.add('aparecerY'); //adiciona a class aparecerY
     setTimeout(() => {
         document.getElementById('bannertxt').classList.remove('aparecerY')
@@ -358,15 +358,15 @@ function updateBanner() {
             break;
         case 2:
             banner.src = "./img/dev9.jpg";
-            text.innerHTML = 'Tutorias '+' <style="display:none;" class="bannerTxtBr"br>'+' Solidas';
+            text.innerHTML = 'Tutoriais'+' <style="display:none;" class="bannerTxtBr"br>'+' Sólidos';
             break;
         case 3:
             banner.src = "./img/dev4.jpg";
-            text.innerHTML = 'Serviços' + ' <style="display:none;" class="bannerTxtBr"br>'+'confiaveis';
+            text.innerHTML = 'Serviços' + ' <style="display:none;" class="bannerTxtBr"br>'+'confiáveis';
             break;
         case 4:
             banner.src = "./img/dev5.jpg";
-            text.innerHTML = 'Design'+ ' <style="display:none;" class="bannerTxtBr"br>'+' Gráfico';
+            text.innerHTML = 'Design'+ ' <style="display:none;" class="bannerTxtBr"br>'+' gráfico';
             break;
         case 5:
             banner.src = "./img/dev6.jpg";
@@ -374,7 +374,7 @@ function updateBanner() {
             break;
         case 6:
             banner.src = "./img/dev10.jpg";
-            text.innerHTML = 'Assistencia '+ '<style="display:none;" class="bannerTxtBr"br>'+' tecnica';
+            text.innerHTML = 'Assistência'+ '<style="display:none;" class="bannerTxtBr"br>'+' técnica';
             break;
         case 7:
             banner.src = "./img/dev7.jpg";

@@ -24,10 +24,6 @@ function showMenu(){
 function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">fácil<span>';setTimeout("trocar2()", 2000);}
 function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">eficaz<span>';setTimeout("trocar3()", 2000);} 
 function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">rápida<span>';setTimeout("trocar1()", 2000);}
-
- //function Aumeuntarpjnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum1');setTimeout("Reduzirpjtnum()",500);}   
- //function Reduzirpjtnum(){document.getElementById('pjnum').classList.toggle('tamanhopjnum2');setTimeout("Aumeuntarpjnum()",500);}  
-
 /*
     //OPÇÃO1
     //function trocartxt(){const tspan=document.querySelectorAll('txtdinamico'); tspan.forEach(mostrar);}

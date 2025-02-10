@@ -3,7 +3,6 @@
     -webkit-clip-path: inset(0);
     clip-path: inset(0);
 }*/
-  
 :root{
     --blueBox:#a8b6c12f;
     --blueMain:#99b0d0;
@@ -144,7 +143,8 @@ font-weight: bold;}
     background: rgba(27, 47, 69, 0.9);
     padding: 5px 0;
     position: fixed !important;
-    top: 0 !important;
+    top: 0!important;
+    margin-top: 0!important;
 }
 /*Fim Sticky nav header*/
 #nav-div-menu{position: absolute; left: 2%; height: 100%;}
@@ -207,11 +207,30 @@ font-weight: bold;}
 }
 /* FIM DO MOVIMENTO DO VERTIVAL  BANNER*/
 #div-banner h5{z-index: 2;position: absolute; left:10%;font-size: 30px; color:rgb(160, 173, 171);}
-#div-banner h1{z-index: 2;position: absolute; left:10%;font-size: 40px; color:rgb(69, 78, 85); margin-right: 4%;}
+#div-banner h1{z-index: 2;position: absolute; left:10%;font-size: 40px; color:rgb(204, 223, 217); margin-right: 4%;}
 #div-banner p{ z-index: 2;position: absolute; top:221px;left:10%;right: 10%; font-size: 20px; color:rgb(120, 161, 155);}
-@keyframes mudarCor{ from{color:#a0adab} to{color:#cadbd9;}}
+/*@keyframes mudarCor{ from{color:#a0adab} to{color:#cadbd9;}}*/
+@keyframes mudarCor{ 
+    0%{color:#a0adab} 
+    10%{color:#a0adabee} 
+    20%{color:#a0adabd2} 
+    30%{color:#a0adabb7} 
+    40%{color:#a0adab94} 
+    500%{color:#a0adab7a}
+    60%{color:#a0adab94} 
+    70%{color:#a0adabb7} 
+    80%{color:#a0adabd2}
+    90%{color:#a0adabee}
+    100%{color:#a0adab} 
+
+
+
+
+
+
+}
 .subtBanner{
-    animation: mudarCor 1s infinite;
+    animation: mudarCor 2s infinite;
 }  
 
 /*codigo para fazer o breack do texto de banner quando a tela é acima de 1024px para que uma parte no texto não fique
@@ -228,6 +247,9 @@ font-weight: bold;}
 }
 @media only screen and (min-width:800px){
     #div-banner p{top:250px;}
+}
+@media only screen and (min-width:1024px){
+    #div-banner h1{color:rgb(69, 78, 85);}
 }
 /* Fim do codigo para fazer o breack do texto de banner quando a tela é acima de 1024px para que uma parte no texto não fique
     em cima da imagem visto que acima de 1024px o div-banner ocupa apenas 500px e abaixo de 1024 ocupa 100% e o texto todo fica encima da imagem sem problema estético*/
@@ -262,7 +284,7 @@ font-weight: bold;}
     .BtNext{right: 6%; top:52%}
 }
 
-#txt_Benvindo{color:#485d69; text-align: center; margin: 5%; font-weight:700;font-size:xx-large;}
+#txt_Benvindo{color:#485d69; text-align: center; margin: 5%; font-weight:700;font-size:32px; margin-top:25%;}
 #txt_solicitar_portofolio{color:#485d69; text-align: center; font-size: large; margin-top: 5%; font-weight:600;}
 .description{ display: flex; flex-direction: column;color:#00566e; font-size:larger; font-weight: 300; width: 90%; margin: auto; margin-top: 150px;min-height: 200px; display: flex;justify-content: center;}
 .descriptionImg{ width: 50%; display: none;}
@@ -670,10 +692,6 @@ font-size: 26px;
 .commit-commit p{margin:10px ;}
 #div-more-commits{margin-bottom:0; text-align:end; width: 80%; margin: auto; margin-top: 1%;}
 #div-more-commits button{background-color:#89d5eb;border-radius:4px;border:none;color:whitesmoke;width:80px;height:30px;}
-/* class para aumentar e diminuir o commit number
-.tamanhopjnum1{width:50px;height:50px;border-radius:25px; transition: all 0.5;}
-.tamanhopjnum2{width:40px;height:40px;border-radius:20px; transition: all 0.5;}
-*/
 /* class para mostrar e ocultar o commit*/
 .scrollOff{transform: translateY(-300px); transition: all 0.5s;height: 0;}
 /*  FIM COMMIT COSTOMIZATION */
@@ -684,13 +702,19 @@ font-size: 26px;
 
 /*  CONTACST CUSTOMISATION*/
 #div_contactos{ margin-top: 100px;}   
-#div_contactos h1{ color:#007DA1;text-align: center;}   
+#div_contactos h1{text-align: center; background-color:#e2f1fc6b;display: flex;width: fit-content;justify-self: center; padding: 2px 10px;  border-radius: 4px; color: #7cc1ca; margin-bottom: 60px;}   
 #contactos{ display: flex; justify-content: center;}
-.iten-contacto{ width:50px; height:50px;border-radius: 25px; margin: 5px; background:linear-gradient(45deg,#2595b4,rgb(50, 243, 243),#2595b4); display: flex; justify-content: center; align-items: center;}
+.iten-contacto{ width:40px; height:40px;border-radius: 4px; margin: 5px; background-color: #17a3b8; /*background-color: #50a8f054;*/ display: flex; justify-content: center; align-items: center;}
+.iten-contacto svg {width: 30px; height: 30px;}
 .iten-contacto svg path{width: 100%; height:100%;}
 .iten-contacto svg{fill:rgb(255, 255, 255);transition: all 0.5s;}
-.iten-contacto svg:hover{ fill: #007DA1;}
-/* @media only screen and (max-width:700px){#development-projects{height:300px;}}*/
+.iten-contacto svg:hover{ fill: #b9e6f3;}
+
+@media only screen and (min-width:800px) {
+    .iten-contacto{ width:50px; height:50px;}
+    .iten-contacto svg {width: 40px;height: 40px;}
+}
+
 /*  FIM DO CONTACST CUSTOMISATION*/
 
 #footer-main{margin-top: 100px; margin-bottom: 40px; display: flex; justify-content: center; background-color:#216f86; width: 100%; height: 100px; color:whitesmoke;}
@@ -735,7 +759,7 @@ font-size: 26px;
 #top-site a img{ margin: 0; padding: 0;}
 #top-site svg path{stroke: #3378b1;stroke-width: 1.3px;}
 
-#mensagem_button{position:fixed;bottom:0%;height:40px;width: 40px; right: 2%; z-index:10; display: block;}
+#mensagem_button{position:fixed;bottom:0%;height:40px;width: 40px; right: 12px; z-index:10; display: block;}
 #mensagem_button::backdrop{filter: blur(10px);}
 #mensagem_button img{max-height: 100%; max-width: 100%;}
 .icon_alt{ Color:#007ea1; font-weight: bold;}
@@ -753,11 +777,11 @@ font-size: 26px;
         height: 40px;
         z-index: 9;
     }
-    #footer-left{ /*background-color:#4474a2;*/ background-color:#216f86; display: flex; justify-content: space-evenly; box-sizing: border-box; object-fit: cover;}        
-    .likehate{margin-left: 5px;margin-top: 1%;height:90%;background-color:#e2f1fc;display: flex; border-radius: 4px;}
+    #footer-left{background-color:transparent;/* background-color:#7c9fa8;*/ display: flex; justify-content: space-evenly; box-sizing: border-box; object-fit: cover;}        
+    .likehate{margin-left: 5px;margin-top: 2%;height:90%;background-color:#e2f1fc;display: flex; border-radius: 4px;}
     #div-hate{margin-right: 5px;}
-    .likehate svg{width: 40px; height: 40px; fill:transparent; stroke:var(--greyB); stroke-width: 1.7px;}
-    .likehate p{font-size: 13px; box-sizing: border-box;font-weight: 800; color:#00566e;}
+    .likehate svg{width: 40px; height: 40px; fill:#f8fafa; stroke:#485d69de; stroke-width: 1.7px;}
+    .likehate p{font-size: 13px; box-sizing: border-box;font-weight: 800; color: #8c9b9e;}
     .svg-hate{transform:rotate(180deg)}
     /* INICIO MESSAGE BOX MESSAGE BOX*/
     #div-message{
@@ -824,9 +848,7 @@ font-size: 26px;
      /* FIM DO  FOOTER FIXO*/ 
 
      /*inicio do midea query do footer fixo*/   
-    @media only screen and (min-width:800px){
-        .hiddenMsgBox{display: block;}
-    }
+
     @media only screen and (max-width:1300px) and (min-width:1023px){
         #message-head{width: 23%;}
         #div-message{width: 70%;}
@@ -834,7 +856,7 @@ font-size: 26px;
     @media only screen and (min-width:1024px){
     #top-site{ height: 60px;width: 60px;  bottom:20%; right:12px;}
     #share-site{right:1.8%;}
-    #footer-left{width: 12%;}
+    #footer-left{width: 12%; background-color:#216f86;}
     #footer-around{width:73%;}
     #footer-rigth{width: 15%;}
     .likehate{margin-left:0; margin-right: 0;}
@@ -842,7 +864,8 @@ font-size: 26px;
     #message-head{width: 28.5%;}
     #div-message{height: 90%;width: 40%;display: flex;justify-content: space-between;position:static;left: 0;margin: 0;box-sizing: content-box;}
     #div-message #messagebox{width: 22%;position:absolute;height: 90%;bottom: 2; margin-left: 4%; background-color: white; outline-style: none!important;}
-    #mensagem_button{position:fixed;bottom:0%;height:40px;width: 40px; left:82%; z-index:3; display: none;}
+    #mensagem_button{display: none;}
+    .hiddenMsgBox{display: block;}
     }
     @media only screen and (min-width:1500px){
         #footer-left{width: 12%;}

@@ -12,6 +12,7 @@
         <meta http-equiv='pragma' content='no-cache'>
         <link rel="stylesheet" href="./style/index.css">
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y3YJJPJKW"></script>
         <script>
@@ -23,9 +24,8 @@
         </script>
     </head>
 
-    <body onLoad="slide1(), trocar1()">
+    <body onLoad="trocar1(),abrirVG(), slide1()">
         <div id="div-blur" class="blur hidden"></div>
-
         <div id="header">
             <div id="upbar">
                 <p id="name">Ukwally</p>
@@ -145,535 +145,544 @@
                     </div>
 
                     <!--INICIO card card2 de PROJETOS em minicards-->
-                    <p style="margin-left: 10%; margin-top: 150px; font-size:12px; color:#334558; font-weight: 600;" id="projectos">VISÃO GERAL DE PROJETOS </p>
-                    <div class="card2" >
-                        <div class="card-header">
-                            <div class="categoria5" data-category="all">Todos</div>
-                            <div class="categoria5" data-category="mobile">Mobile</div>
-                            <div class="categoria5" data-category="desktop">Desktop</div>
-                            <div class="categoria5" data-category="design">Design</div>
-                            <div class="categoria5" data-category="web">Web</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="mini-card mobile">
-                                <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
-                                <div class="mini-card-body">
-                                    <p class="title">LUCAR</p>
-                                    <p class="subtitle">Software de identificação de viaturas.</p>
-                                </div>
+                    <div class="tittle" id="projectos" style=" margin: 150px 0px 0px 1%;">
+                        <h2 style="font-size: 30px;">PROJETOS</h2>
+                    </div>
+                    <span class="pjtTabHeader">
+                        <p onclick="abrirVS()" id="pjtAncor1" style="cursor: pointer;margin-left: 5%; font-size:12px; color:#334558; font-weight: 600;">VISÃO GERAL DE PROJETOS</p>
+                        <p onclick="abrirVG()" id="pjtAncor2" style="cursor: pointer;margin-left: 5%; font-size:12px; color:#334558; font-weight:600;">VISÃO SINGULAR DE PROJETOS</p>                    
+                    </span>
+                    <span id="projecSection1" style="display: none;">
+                        <div class="card2" >
+                            <div class="card-header">
+                                <div class="categoria5" data-category="all">Todos</div>
+                                <div class="categoria5" data-category="mobile">Mobile</div>
+                                <div class="categoria5" data-category="desktop">Desktop</div>
+                                <div class="categoria5" data-category="design">Design</div>
+                                <div class="categoria5" data-category="web">Web</div>
                             </div>
-                            <div class="mini-card web">
-                                <div class="mini-card-head">
-                                    <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                            <div class="card-body">
+                                <div class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LUCAR</p>
+                                        <p class="subtitle">Software de identificação de viaturas.</p>
+                                    </div>
                                 </div>
-                                <div class="mini-card-body">
-                                    <p class="title">SELISNOVA</p>
-                                    <p class="subtitle">Website empresarial</p>
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">SELISNOVA</p>
+                                        <p class="subtitle">Website empresarial</p>
+                                    </div>
                                 </div>
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">ORKAZY</p>
+                                        <p class="subtitle">Software de comércio eletrônico.</p>
+                                    </div>
+                                </div>
+                                <!--div-- class="mini-card desktop">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-imac-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LOGEST</p>
+                                        <p class="subtitle">Software de gestão logística.</p>
+                                    </div>
+                                </!--div-->
+                                <div class="mini-card web">
+                                    <div class="mini-card-head"> 
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">UKWALLY PORTFÓLIO</p>
+                                        <p class="subtitle">Portfólio pessoal de projetos.</p>
+                                    </div>
+                                </div>
+                                <!--div-- class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">UNINET</p>
+                                        <p class="subtitle">Rede social universitária.</p>
+                                    </div>
+                                </!--div-->
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">CUTCODE</p>
+                                        <p class="subtitle">Software de simplificação de código.</p>
+                                    </div>
+                                </div>
+    
+                                <!--div-- class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">FINNET</p>
+                                        <p class="subtitle">Software de finanças pessoais. </p>
+                                    </div>
+                                </!--div-->
+                                <!--div-- class="mini-card design">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LOGO ORKAZY</p>
+                                        <p class="subtitle">Logotipo empresarial</p>
+                                    </div>
+                                </!--div-->
                             </div>
-                            <div class="mini-card web">
-                                <div class="mini-card-head">
-                                    <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
-                                </div>
-                                <div class="mini-card-body">
-                                    <p class="title">ORKAZY</p>
-                                    <p class="subtitle">Software de comércio eletrônico.</p>
-                                </div>
+                            <div class="card-footer">
+                                <form action="" method="get" onsubmit="return false;">
+                                    <button class="button" type="submit">Pesquisar projeto</button>
+                                    <input type="search" name="buscarProjecto" id="buscarProjecto" placeholder=" ">
+                                </form>
                             </div>
-                            <!--div-- class="mini-card desktop">
-                                <div class="mini-card-head"> <img src="./icon/icons8-imac-50.png" alt=""></div>
-                                <div class="mini-card-body">
-                                    <p class="title">LOGEST</p>
-                                    <p class="subtitle">Software de gestão logística.</p>
-                                </div>
-                            </!--div-->
-                            <div class="mini-card web">
-                                <div class="mini-card-head"> 
-                                    <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
-                                </div>
-                                <div class="mini-card-body">
-                                    <p class="title">UKWALLY PORTFÓLIO</p>
-                                    <p class="subtitle">Portfólio pessoal de projetos.</p>
-                                </div>
-                            </div>
-                            <!--div-- class="mini-card mobile">
-                                <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
-                                <div class="mini-card-body">
-                                    <p class="title">UNINET</p>
-                                    <p class="subtitle">Rede social universitária.</p>
-                                </div>
-                            </!--div-->
-                            <div class="mini-card web">
-                                <div class="mini-card-head">
-                                    <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
-                                </div>
-                                <div class="mini-card-body">
-                                    <p class="title">CUTCODE</p>
-                                    <p class="subtitle">Software de simplificação de código.</p>
-                                </div>
-                            </div>
-
-                            <!--div-- class="mini-card mobile">
-                                <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
-                                <div class="mini-card-body">
-                                    <p class="title">FINNET</p>
-                                    <p class="subtitle">Software de finanças pessoais. </p>
-                                </div>
-                            </!--div-->
-                            <!--div-- class="mini-card design">
-                                <div class="mini-card-head"> <img src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
-                                <div class="mini-card-body">
-                                    <p class="title">LOGO ORKAZY</p>
-                                    <p class="subtitle">Logotipo empresarial</p>
-                                </div>
-                            </!--div-->
-                        </div>
-                        <div class="card-footer">
-                            <form action="" method="get" onsubmit="return false;">
-                                <button class="button" type="submit">Pesquise pelo projeto</button>
-                                <input type="search" name="buscarProjecto" id="buscarProjecto" placeholder=" ">
-                            </form>
-                        </div>
-                    </div> 
+                        </div> 
+                    </span>
                     <!--FIM card card2 de PROJETOS em minicards-->
 
                     <!-- INICIO SLIDE  PROJETOS VISÃO UNICA-->
-                    <P style="margin-left: 10%; margin-top: 150px; font-size:12px; color:#334558; font-weight: 600;">PROJETOS COM VISÃO SINGULAR</P>
-                    <div class="card card3" style="margin-bottom: 200px;">
-                        <div class="card-header">
-                            <div class="categoria5" onclick="filterProject('all')">Todos</div>
-                            <div class="categoria5" onclick="filterProject('mobile')">Mobile</div>
-                            <div class="categoria5" onclick="filterProject('desktop')">Desktop</div>
-                            <div class="categoria5" onclick="filterProject('design')">Design</div>
-                            <div class="categoria5" onclick="filterProject('web')">web</div>
+                    <span id="projecSection2" style="display: none;">
+                        <div class="card card3" style="margin-bottom: 200px;">
+                            <div class="card-header">
+                                <div class="categoria5" onclick="filterProject('all')">Todos</div>
+                                <div class="categoria5" onclick="filterProject('mobile')">Mobile</div>
+                                <div class="categoria5" onclick="filterProject('desktop')">Desktop</div>
+                                <div class="categoria5" onclick="filterProject('design')">Design</div>
+                                <div class="categoria5" onclick="filterProject('web')">web</div>
+                            </div>
+                            <div class="card-body" id="project-container">
+                                <!-- Project 4 (Mobile) -->
+                                <div class="project" data-category="mobile">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/pj6.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">LUCAR</p>
+                                        <p class="subtitle">Software de identificação de viaturas</p>
+                                        <p class="text">Sistema inteligente integrado de registo e identificação automática de veículos por reconhecimento óptico de matrículas</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://github.com/Ukwally/MobileLucarApp" target="_blank">Link do projeto no Github</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://github.com/Ukwally/MobileLucarApp" target="_blank">Link do projeto</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-orkazy')">Readme</button>
+                                            <div class="txt-readme" id="readme-orkazy">
+                                                O presente sistema é sobre dois módulos de software integrados, que juntos possibilitam o acesso a dados proprietários de viaturas. <br>
+                                                Um módulo é WEB e permite registar em um banco de dados os dados da viatura e do proprietário da viatura,de modo que seja possível ver o histórico geral de proprietários que uma viatura já teve desde que foi concebida. <br>
+                                                Outro módulo é mobile e permite a  identificação automática de veículos por reconhecimento óptico de matrículas, e também retorna os dados da viatura, do proprietário atual e o histórico de todos os proprietário que a viatura já teve.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div-- class="project" data-category="mobile" >
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">FINNET</p>
+                                        <p class="subtitle">Software de finanças pessoais</p>
+                                        <p class="text">Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-lucar')">Readme</button>
+                                            <div class="txt-readme" id="readme-lucar">
+                                                Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!--div-- class="project" data-category="mobile">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">UNINET</p>
+                                        <p class="subtitle">Rede social universitária</p>
+                                        <p class="text">Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-uninet')">Readme</button>
+                                            <div class="txt-readme" id="readme-uninet">
+                                                Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades. <br>
+                                                Permite marcar palestras, partilhas notas, acessar matéria e conhecer colegas de outros cursos. <br>
+                                                Exibe o melhor aluno da universidade automaticamente.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!-- Project 4 (Web) -->
+                                
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/selisnova2.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">SELISNOVA</p>
+                                        <p class="subtitle">Website empresarial</p>
+                                        <p class="text">Websites empresarial comercial</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://ukwally.github.io/selisnova/" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://ukwally.github.io/selisnova/" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
+                                            <div class="txt-readme" id="readme-portfolio-ukwally">
+                                                Websites empresarial comercial.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/portfolooscreen.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">PORTFÓLIO UKWALLY</p>
+                                        <p class="subtitle">Portfólio pessoal de projetos</p>
+                                        <p class="text">Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
+                                            <div class="txt-readme" id="readme-portfolio-ukwally">
+                                                Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally.
+                                                Construído com HTML, CSS e JavaScript, sem templates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj4.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">ORKAZY</p>
+                                        <p class="subtitle">Software de Comércio eletrónico</p>
+                                        <p class="text">Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-finnet')">Readme</button>
+                                            <div class="txt-readme" id="readme-finnet">
+                                                Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software. <br>
+                                                Com a possibilidade de Solicitar online.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Project 4 (Desktop) -->
+                                <!--div-- class="project" data-category="desktop">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">LOGEST</p>
+                                        <p class="subtitle">Software de gestão logística</p>
+                                        <p class="text">Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-logest')">Readme</button>
+                                            <div class="txt-readme" id="readme-logest">
+                                                Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!-- Project 4 (Design) -->
+                                <div class="project" data-category="design">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj4.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">ORKAZY LOGO</p>
+                                        <p class="subtitle">Logotipo empresarial</p>
+                                        <p class="text">Logotipo empresarial para a sua identidade visual.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-logo-orkazy')">Readme</button>
+                                            <div class="txt-readme" id="readme-logo-orkazy">
+                                                Logotipo empresarial para a sua identidade visual.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-btn-direction">
+                                    <button class="btn-direction" onclick="navigate(-1)">&#10094</button>
+                                    <p class="totalProjects">1 de 5</p>
+                                    <button class="btn-direction"onclick="navigate(1)">&#10095</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
                         </div>
-                        <div class="card-body" id="project-container">
-                            <!-- Project 4 (Mobile) -->
-                            <div class="project" data-category="mobile">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="./img/pj6.jpg" alt="">
-                                            </div>
-                                            <!--div class="urderScreen"></div-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">LUCAR</p>
-                                    <p class="subtitle">Software de identificação de viaturas</p>
-                                    <p class="text">Sistema inteligente integrado de registo e identificação automática de veículos por reconhecimento óptico de matrículas</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Link do projeto no Github</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Link do projeto</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-orkazy')">Readme</button>
-                                        <div class="txt-readme" id="readme-orkazy">
-                                            O presente sistema é sobre dois módulos de software integrados, que juntos possibilitam o acesso a dados proprietários de viaturas. <br>
-                                            Um módulo é WEB e permite registar em um banco de dados os dados da viatura e do proprietário da viatura,de modo que seja possível ver o histórico geral de proprietários que uma viatura já teve desde que foi concebida. <br>
-                                            Outro módulo é mobile e permite a  identificação automática de veículos por reconhecimento óptico de matrículas, e também retorna os dados da viatura, do proprietário atual e o histórico de todos os proprietário que a viatura já teve.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--div-- class="project" data-category="mobile" >
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="../img/pj3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">FINNET</p>
-                                    <p class="subtitle">Software de finanças pessoais</p>
-                                    <p class="text">Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-lucar')">Readme</button>
-                                        <div class="txt-readme" id="readme-lucar">
-                                            Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.
-                                        </div>
-                                    </div>
-                                </div>
-                            </!--div-->
-                            <!--div-- class="project" data-category="mobile">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="../img/pj2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">UNINET</p>
-                                    <p class="subtitle">Rede social universitária</p>
-                                    <p class="text">Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades.</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-uninet')">Readme</button>
-                                        <div class="txt-readme" id="readme-uninet">
-                                            Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades. <br>
-                                            Permite marcar palestras, partilhas notas, acessar matéria e conhecer colegas de outros cursos. <br>
-                                            Exibe o melhor aluno da universidade automaticamente.
-                                        </div>
-                                    </div>
-                                </div>
-                            </!--div-->
-                            <!-- Project 4 (Web) -->
-                            
-                            <div class="project" data-category="web">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="./img/selisnova2.jpg" alt="">
-                                            </div>
-                                            <!--div class="urderScreen"></div-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">SELISNOVA</p>
-                                    <p class="subtitle">Website empresarial</p>
-                                    <p class="text">Websites empresarial comercial</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="https://ukwally.github.io/selisnova/" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="https://ukwally.github.io/selisnova/" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
-                                        <div class="txt-readme" id="readme-portfolio-ukwally">
-                                            Websites empresarial comercial.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="project" data-category="web">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="./img/portfolooscreen.jpg" alt="">
-                                            </div>
-                                            <!--div class="urderScreen"></div-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">PORTFÓLIO UKWALLY</p>
-                                    <p class="subtitle">Portfólio pessoal de projetos</p>
-                                    <p class="text">Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
-                                        <div class="txt-readme" id="readme-portfolio-ukwally">
-                                            Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally.
-                                            Construído com HTML, CSS e JavaScript, sem templates.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project" data-category="web">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="../img/pj4.jpg" alt="">
-                                            </div>
-                                            <!--div class="urderScreen"></div-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">ORKAZY</p>
-                                    <p class="subtitle">Software de Comércio eletrónico</p>
-                                    <p class="text">Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-finnet')">Readme</button>
-                                        <div class="txt-readme" id="readme-finnet">
-                                            Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software. <br>
-                                            Com a possibilidade de Solicitar online.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project 4 (Desktop) -->
-                            <!--div-- class="project" data-category="desktop">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="../img/pj2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">LOGEST</p>
-                                    <p class="subtitle">Software de gestão logística</p>
-                                    <p class="text">Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-logest')">Readme</button>
-                                        <div class="txt-readme" id="readme-logest">
-                                            Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto.
-                                        </div>
-                                    </div>
-                                </div>
-                            </!--div-->
-                            <!-- Project 4 (Design) -->
-                            <div class="project" data-category="design">
-                                <div class="body-image">
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="contentScreen">
-                                                <img src="../img/pj4.jpg" alt="">
-                                            </div>
-                                            <!--div class="urderScreen"></div-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-description">
-                                    <p class="title">ORKAZY LOGO</p>
-                                    <p class="subtitle">Logotipo empresarial</p>
-                                    <p class="text">Logotipo empresarial para a sua identidade visual.</p>
-                                    <div class="project-links">
-                                        <div class="project-link">
-                                            <div class="project-link-icon">
-                                                <svg width="30" height="30" viewBox="0 0 90 90">
-                                                    <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank"> Gihtub Link for project</a>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="project-link">
-                                            <div class="project-link-icon" >
-                                                <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
-                                                    <g fill-rule="evenodd" class="wd-icon-container">
-                                                        <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
-                                                        </path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <a href="#" target="_blank">Ling for project</a>
-                                            </div>
-                                        </div>
-                    
-                                    </div>
-                                    <div class="project-readme">
-                                        <button class="btn btn-readme" onclick="extender('readme-logo-orkazy')">Readme</button>
-                                        <div class="txt-readme" id="readme-logo-orkazy">
-                                            Logotipo empresarial para a sua identidade visual.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="div-btn-direction">
-                                <button class="btn-direction" onclick="navigate(-1)">&#10094</button>
-                                <p class="totalProjects">1 de 5</p>
-                                <button class="btn-direction"onclick="navigate(1)">&#10095</button>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                        </div>
-                    </div>
+                    </span>
                     <!-- FIM SLIDE  projetos VISÃO UNICA-->
 
                     <div class="development development-about" style=" margin-top: 150px;">
@@ -986,6 +995,8 @@
 
         <div id="mensagem_button" class="icon_alt" title=" mensagem" onclick="iniciarMensagem(),MostrarCampoEmail()">
             <img name="mensagem" alt="Chat" src="./icon/msg.png" />
+            <!--i style="font-size: 40px;" class="material-icons">chat</i-->
+
         </div>
 
         <div id="footer">
@@ -1186,6 +1197,7 @@
             </div>
         </dialog>
         <script src="./js/index.js"></script>
+        <script src="./js/projectabs.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const shareButton = document.getElementById('shareButton');

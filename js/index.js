@@ -21,8 +21,8 @@ function showMenu(){
     document.getElementById('section-left').classList.toggle('hidden');
 }
 //INICIO DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
-function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:blue">fácil<span>';setTimeout("trocar2()", 2000);}
-function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:red">eficaz<span>';setTimeout("trocar3()", 2000);} 
+function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:darkcyan">fácil<span>';setTimeout("trocar2()", 2000);}
+function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:olive">eficaz<span>';setTimeout("trocar3()", 2000);} 
 function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">rápida<span>';setTimeout("trocar1()", 2000);}
 /*
     //OPÇÃO1

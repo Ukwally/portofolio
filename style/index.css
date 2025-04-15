@@ -2,8 +2,12 @@
 /*.teste{
     -webkit-clip-path: inset(0);
     clip-path: inset(0);
+
+    Golden Colors  background rgba(0, 185, 183, 0.15)  button #00b9b7
 }*/
 :root{
+    --GOLDEN1:#A0CECB;
+    --GOLDEN2:#B2DBD8;
     --blueBox:#a8b6c12f;
     --blueMain:#99b0d0;
     --witegrey:#dddddd;
@@ -156,12 +160,12 @@ font-weight: bold;}
 #nav-div-menu{position: absolute; left: 2%; height: 100%;}
 /*#nav-div-menu img{ max-height:100%;} if so i use image icon to menu*/
 #nav-div-menu span{ height: 3px; width:25px; margin: 3px;display:block; border-radius: 2px; background-color:var(--blue);}
-.nav-div{margin-right: 0%; padding: 0% 2% 0% 2%;}
+.nav-div{margin-right: 0%; padding: 0% 2% 0% 2%; transition: all 0.7s;}
 .nav-div a{text-decoration: none; display: flex;}
     /*CORRIGIR IMG DE PIXEL PARA PERCENTAGEM*/
 .nav-div a img{text-decoration: none; max-height: 20px; margin-right: 7px;}
 .iten-nav{margin:0;color:white;font-weight: bold 300;}
-#nav .nav-div:hover{ background-color: rgba(0, 125, 174, 0.411);}
+#nav .nav-div:hover{ background-color: rgb(153,176,208);}
 /*-----------------------------------
     FIM DO CABECARIO
 ----------------------------*/
@@ -227,13 +231,8 @@ font-weight: bold;}
     80%{color:#a0adabd2}
     90%{color:#a0adabee}
     100%{color:#a0adab} 
-
-
-
-
-
-
 }
+
 .subtBanner{
     animation: mudarCor 2s infinite;
 }  
@@ -364,10 +363,19 @@ INICIO DEVELOPMENT GERAL
 /*-------------------------------
 INICIO PROJECTOS COSTOMIZATION 
 --------------------------------*/
+/*TABS PROJECTOS*/
+.pjtTabHeader{ display: flex; flex-direction: row; justify-content: left; align-items:start;}
+.pjtTabHeader p{color: #17a3b8; display:block; border: 1px solid whitesmoke; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px; opacity: .8;}
+#projecSection1.active{display: block!important;}
+#projecSection2.active{ display: block!important;}
+
+#pjtAncor1.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px ;opacity: .9;}
+#pjtAncor2.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px ;opacity: .9;}
 
 /*---------------------------------------
 INICIO CARD 2 CARD 2 CARD 2 CARD 2 CARD 2
 ----------------------------------------*/
+
 .card2{         
     width: 90%;
     margin: auto;
@@ -737,7 +745,7 @@ font-size: 26px;
 
 /*  FIM DO CONTACST CUSTOMISATION*/
 
-#footer-main{margin-top: 100px; margin-bottom: 40px; display: flex; justify-content: center; background-color:#216f86; width: 100%; height: 100px; color:whitesmoke;}
+#footer-main{margin-top: 100px; margin-bottom: 40px; display: flex; justify-content: center; width: 100%; height: 100px; color:#454e55;}
 
 @media only screen and (min-width:1024px){
     #div-body-left{width:100%; /* REAL WIDTH?  width:83.3%;*/}
@@ -782,6 +790,7 @@ font-size: 26px;
 #mensagem_button{position:fixed;bottom:0%;height:40px;width: 40px; right: 12px; z-index:10; display: block;}
 #mensagem_button::backdrop{filter: blur(10px);}
 #mensagem_button img{max-height: 100%; max-width: 100%;}
+#mensagem_button span{font-size: 40px;}
 .icon_alt{ Color:#007ea1; font-weight: bold;}
 .hiddenMsgBox{display:none;}
 /*  FIM DO  SHARE E TOP SITE E MENSSAGE BOTTOM*/

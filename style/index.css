@@ -427,7 +427,7 @@ INICIO CARD 2 CARD 2 CARD 2 CARD 2 CARD 2
     justify-content: center;
     border-radius: 4px;
 }
-.card2 .mini-card .mini-card-head{ cursor: pointer;background-color: #3b8aa0b9; /*background-color:#265a68c4;*/ height: 79px;width:70px;margin: 5px;border-radius: 4px; display: flex;align-items: center;justify-content: center;}
+.card2 .mini-card .mini-card-head{ cursor: pointer;/*background-color: #3b8aa0b9;*/background-color: #9ac9c7; height: 79px;width:70px;margin: 5px;border-radius: 4px; display: flex;align-items: center;justify-content: center;}
 .card2 .mini-card .mini-card-head svg{ fill:white; }
 .card2 .mini-card .mini-card-head img{ max-width: 90%; max-height: 90%; }
 .card2 .mini-card .mini-card-body{ cursor: pointer;background-color: #3b8aa017; height: 79px;width:calc(100% - 80px); border-radius: 4px;margin: 5px; padding: 5px; object-fit: cover;box-sizing: border-box;}
@@ -438,7 +438,14 @@ INICIO CARD 2 CARD 2 CARD 2 CARD 2 CARD 2
 .card2 .card-footer{ display: flex;align-items: center;background-color:#2f5e6118;height: 100px;border-bottom: 3px solid #7fb4b6;}
 .card2 .card-footer form{width: 100%;}
 .card2 .card-footer form input{margin-left: 2%;height:30px; width: 40%; border-radius: 3px;border: 1px solid rgba(128, 128, 128, 0.473);outline-color:1px solid grey;;outline-offset: none; outline-width: 0; outline-style: none;}
-.card2 .card-footer form button{margin-left: 2%; height: 30px; width: fit-content; background-color:  rgb(174, 198, 201); border: none; border-radius: 3px; color: white; box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.603);
+.card2 .card-footer form button{margin-left: 2%; height: 30px; width: fit-content; border: none;
+    border-radius: 4px;
+    border-style: none;
+    outline-style: none;
+    background-color: #7cc1ca;
+    box-shadow: 0px 0px 5px 2px #8ea1a767;
+    font-weight: bold;
+    color: whitesmoke;
 }
 @media only screen and (min-width:1024px){
     .card2 .card-header .categoria5{
@@ -463,7 +470,7 @@ INICIO CARD 2 CARD 2 CARD 2 CARD 2 CARD 2
     .card2 .mini-card .mini-card-body{height: 79px; width: 300px; margin: 10px; padding: 10px;}
     .card2 .mini-card .mini-card-body .title{font-size: 18px; font-weight: 600;margin:2px 0px;}
     .card2 .mini-card .mini-card-body .subtitle{  font-size: 16px;margin:2px 0px;}
-    .card2 .card-footer form button{margin-left: 12%; height: 30px; width: fit-content; background-color:  rgb(174, 198, 201); border: none; border-radius: 3px; color: white; box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.603);}
+    .card2 .card-footer form button{margin-left: 12%; height: 30px;}
 }
 
 /*---------------------------------------
@@ -673,11 +680,15 @@ background: linear-gradient(140deg ,#f6f6f700, #f6f6f700, #f6f6f700, #f6f6f700, 
     height:42px;width:190px;
     border-radius:4px;
     border-style: none;
-    /*background-color: #639aa1;*/
-    background-color: #216f86;
+    border: none;
+    outline-style: none;
+    background-color: #7cc1ca;
     box-shadow: 0px 0px 5px 2px #8ea1a767;
     font-weight: bold;
-    color:whitesmoke;}
+    color: whitesmoke;
+
+
+}
 .bi-quote::before {
 content:  "\f6b0";
 font-family: bootstrap-icons !important;
@@ -732,11 +743,11 @@ font-size: 26px;
 #div_contactos{ margin-top: 100px;}   
 #div_contactos h1{text-align:center;margin: auto;background-color:#e2f1fc6b;display: flex;width:fit-content;justify-content: center; padding: 2px 10px;  border-radius: 4px; color: #7cc1ca; margin-bottom: 60px;}   
 #contactos{ display: flex; justify-content: center;}
-.iten-contacto{ width:40px; height:40px;border-radius: 4px; margin: 5px; background-color: #17a3b8; /*background-color: #50a8f054;*/ display: flex; justify-content: center; align-items: center;}
+.iten-contacto{ width:40px; height:40px;border-radius: 4px; margin: 5px; background-color: #7cc1ca; /*background-color: #50a8f054;*/ display: flex; justify-content: center; align-items: center;}
 .iten-contacto svg {width: 30px; height: 30px;}
 .iten-contacto svg path{width: 100%; height:100%;}
 .iten-contacto svg{fill:rgb(255, 255, 255);transition: all 0.5s;}
-.iten-contacto svg:hover{ fill: #b9e6f3;}
+.iten-contacto svg:hover{transform: scale(1.5);}
 
 @media only screen and (min-width:800px) {
     .iten-contacto{ width:50px; height:50px;}

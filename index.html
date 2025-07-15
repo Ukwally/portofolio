@@ -24,7 +24,8 @@
         </script>
     </head>
 
-    <body onLoad="trocar1(),abrirVG(), slide1()">
+    <!--body onLoad="trocar1(),abrirVG(), slide1()"-->
+    <body onLoad="trocar1(),abrirVG()">
         <div id="div-blur" class="blur hidden"></div>
         <div id="header">
             <div id="upbar">
@@ -84,13 +85,13 @@
                         <a class="btNext" onclick="mudarSlide(1)">&#10095</a>
                     </div>
 
-                    <h1 id="txt_Benvindo">BEM-VINDO AO MEU PORTFÓLIO</h1>
-                    <p id="txt_solicitar_portofolio">Solicite o seu próprio portfólio <b id="textoDinamico">fácil</b>mente clicando <span><a href="#" onclick="mostrarDialogo1()">AQUI</a></span></p>
+                    <h1 id="txt_Benvindo" class="animado">BEM-VINDO AO MEU PORTFÓLIO</h1>
+                    <p id="txt_solicitar_portofolio" class="animado">Solicite o seu próprio portfólio <b id="textoDinamico">fácil</b>mente clicando <span><a href="#" onclick="mostrarDialogo1()">AQUI</a></span></p>
                     <div class="description">
                         <div class="descriptionImg">
-                            <img src="./img/greatUkwally.png" alt="">
+                            <img class="animado" src="./img/greatUkwally.png" alt="">
                         </div>
-                        <p>
+                        <p id="DescriptionP" class="animado">
                             Me chame por ukwally, e seja bem-vindo ao meu portfólio , um lugar desenvolvido totalmente por
                             mim, onde poderá interagir comigo sempre que precisar. <br>
                             <span class="txtdespedida" style="font-family: sans-serif;">Descubra projetos e serviços.</span> <br><br>
@@ -111,22 +112,22 @@
                                 <div class="cardBody"> Design Gráfico <Span>.</Span> <br> <span>Ver mais <div class="detailsHidden">Crio identidades visuais marcantes.</div></span></div>
                                 <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
                             </--div-->
-                            <div class="serviceCard">
+                            <div class="serviceCard animado">
                                 <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-consulta-64.png" alt=""></div>
                                 <div class="cardBody"> Consultoria e Suporte em TI <br> <span>Ver mais <div class="detailsHidden">Dicas de especialistas em informática para impulsionar o seu negócio e prevenir ou resolver problemas. E suporte técnico de especialistas.</div></span></div>
                                 <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
                             </div>
-                            <div class="serviceCard">
+                            <div class="serviceCard animado">
                                 <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-sala-de-aula-48.png" alt=""></div>
                                 <div class="cardBody"> Aulas locais e Domiciliares <br> <span>Ver mais <div class="detailsHidden">Lógica de programação, Programação web com HTML CSS JavaScript, Banco de dados, Big data e análise de dados, Redes de computadores. <br> <b>Com certificados de formação.</b>  </div></span></div>
                                 <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
                             </div>
-                            <div class="serviceCard">
+                            <div class="serviceCard animado">
                                 <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-paginas-web-64.png" alt=""></div>
                                 <div class="cardBody">Produção de Websites <br> <span>Ver mais <div class="detailsHidden">Websites eficientes, com interfaces intuitivas. <br> <b>Prontos em pouco tempo.</b> </div></span></div>
                                 <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
                             </div>
-                            <div class="serviceCard">
+                            <div class="serviceCard animado">
                                 <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-iphone-x-50.png" alt=""> <img style="margin: 20px 0px; float:right;" src="./icon/icons8-imac-50.png" alt=""></div>
                                 <div class="cardBody">App Mobile | Desktop <br> <span>Ver mais <div class="detailsHidden">Aplicativos Desktop e Mobile para gestão de negócios específicos. Com interfaces intuitivas. <br> <b>Prontos em pouco tempo.</b> </div></span></div>
                                 <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
@@ -523,7 +524,7 @@
                                         <div class="phone">
                                             <div class="screen">
                                                 <div class="contentScreen">
-                                                    <img src="../img/pj4.jpg" alt="">
+                                                    <img src="" alt="">
                                                 </div>
                                                 <!--div class="urderScreen"></div-->
                                             </div>
@@ -627,7 +628,7 @@
                                         <div class="phone">
                                             <div class="screen">
                                                 <div class="contentScreen">
-                                                    <img src="../img/pj4.jpg" alt="">
+                                                    <img src="" alt="">
                                                 </div>
                                                 <!--div class="urderScreen"></div-->
                                             </div>

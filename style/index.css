@@ -287,14 +287,45 @@ font-weight: bold;}
     .btBefore{ left:6%; top:52%}
     .BtNext{right: 6%; top:52%}
 }
+/*INICIO animação txt Bem-Vindo*/
+#txt_Benvindo{
+    color:#485d69; 
+    text-align: center; 
+    margin: 5%; font-weight:700;
+    font-size:32px; margin-top:25%;
+    transform: scale(0.5);opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+#txt_solicitar_portofolio{
+    color:#485d69; 
+    text-align: center; font-size: large; 
+    margin-top: 5%; font-weight:600;
+    transform: translateY(80px);opacity:0;transition: all 0.5s;
+}
+#txt_Benvindo.visible{transform: scale(1);opacity: 1;}
+#txt_solicitar_portofolio.visible{ transform: translateY(0px);opacity: 1;}
+/*Fim animação txt Bem-Vindo*/
 
-#txt_Benvindo{color:#485d69; text-align: center; margin: 5%; font-weight:700;font-size:32px; margin-top:25%;}
-#txt_solicitar_portofolio{color:#485d69; text-align: center; font-size: large; margin-top: 5%; font-weight:600;}
 .description{ display: flex; flex-direction: column;color:#00566e; font-size:larger; font-weight: 300; width: 90%; margin: auto; margin-top: 150px;min-height: 200px; display: flex;justify-content: center;}
 .descriptionImg{ width: 50%; display: none;}
-.descriptionImg img{ max-width: 100%;} 
-.description p{margin-left: 10px;}
-.txtdespedida{ font-weight:400;}
+.descriptionImg img{ max-width: 100%; opacity: 0; transition:all 2s ;} 
+.description #DescriptionP{margin-left: 10px; transform: translateY(100px);opacity: 0;transition: all 1s;}
+.txtdespedida{ font-weight:400; animation: mudarCor 1s infinite;cursor: pointer;}
+
+.descriptionImg img.visible{ opacity: 1;} 
+.description #DescriptionP.visible{transform: translateY(0);opacity:1;}
+@keyframes mudarCor {
+    10%{color:#00566eec}
+    20%{color:#00566ec4}
+    30%{color:#00566ed8}
+    40%{color:#00566ebe}
+    50%{color:#00566ea8}
+    60%{color:#00566e88}
+    70%{color:#00566e73}
+    80%{color:#00566e62}
+    90%{color:#00566e48}
+    100%{color:#00566e2f}
+}
 @media only screen and (min-width:1024px){
     #section-rigth{width:88%; }
     #nav-div-menu .icon_alt{display: none;}
@@ -345,7 +376,11 @@ INICIO DEVELOPMENT GERAL
     transition: all 0.5s;
     margin: 1px;
     margin-top: 15px;
+    transform: translateY(150px);/*inicio animação service card*/
+    opacity: 0;
 }
+#group-service .serviceCard.visible{ transform: translateY(0);opacity: 1;}
+/*fim animação service card*/
 #group-service .serviceCard:hover{box-shadow: 0px 0px 12px 6px #54717262}
 #group-service .serviceCard div{ height:100px;}
 #group-service .serviceCard .cardHead{opacity:.4; background-color: darkcyan; border-top-left-radius: 6px; border-top-right-radius: 6px;}
@@ -365,12 +400,12 @@ INICIO PROJECTOS COSTOMIZATION
 --------------------------------*/
 /*TABS PROJECTOS*/
 .pjtTabHeader{ display: flex; flex-direction: row; justify-content: left; align-items:start;}
-.pjtTabHeader p{color: #17a3b8; display:block; border: 1px solid whitesmoke; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px; opacity: .8;}
+.pjtTabHeader p{color: #17a3b8; display:block; border: 1px solid whitesmoke; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px; opacity: .8;margin-bottom: 0px;}
 #projecSection1.active{display: block!important;}
 #projecSection2.active{ display: block!important;}
 
-#pjtAncor1.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px ;opacity: .9;}
-#pjtAncor2.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px; padding: 10px 10px 5px 10px ;opacity: .9;}
+#pjtAncor1.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px 4px 0px 0px; padding: 10px 10px 5px 10px ;opacity: .9;}
+#pjtAncor2.active{background-color: #17a3b811; display:block; border: 1px solid #17a3b8; box-sizing: border-box; border-bottom: none; border-radius: 4px 4px 0px 0px; padding: 10px 10px 5px 10px ;opacity: .9;}
 
 /*---------------------------------------
 INICIO CARD 2 CARD 2 CARD 2 CARD 2 CARD 2

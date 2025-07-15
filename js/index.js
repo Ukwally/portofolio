@@ -1,29 +1,45 @@
-  /*
-    Sticky header on scroll
-   */
+/*
+  Sticky header on scroll
+ */
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
-  const selectHeader = document.querySelector('#nav');
-  if (selectHeader) {
-    document.addEventListener('scroll', () => {
-      window.scrollY > 100 ? selectHeader.classList.add('sticked') : selectHeader.classList.remove('sticked');
-      window.scrollY > 100 ? document.getElementById('top-site').classList.add('visible') : document.getElementById('top-site').classList.remove('visible');
-    });
-  }
+    const selectHeader = document.querySelector('#nav');
+    if (selectHeader) {
+        document.addEventListener('scroll', () => {
+            window.scrollY > 100 ? selectHeader.classList.add('sticked') : selectHeader.classList.remove('sticked');
+            window.scrollY > 100 ? document.getElementById('top-site').classList.add('visible') : document.getElementById('top-site').classList.remove('visible');
+        });
+    }
 });
 
-function showMenu(){ 
+function showMenu() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
     document.getElementById('section-left').classList.toggle('hidden');
 }
+// para adicionar animação quando o evento vor scroll
+ window.addEventListener('scroll', function () {
+    const boxes = document.querySelectorAll('.animado');
+
+    // Verifica se o elemento está visível na tela
+    boxes.forEach(function (box) {
+        const boxPosition = box.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;  // O fator 1.5 vai fazer o efeito acontecer antes de estar no centro total
+
+        // Se o topo do elemento estiver dentro da janela de visualização
+        if (boxPosition < screenPosition) {
+            box.classList.add('visible');
+        }
+    });
+});
+
 //INICIO DINAMIC TEXT DINAMIC TEXT DINAMIC TEXT
-function trocar1(){document.getElementById('textoDinamico').innerHTML='<span style="color:darkcyan">fácil<span>';setTimeout("trocar2()", 2000);}
-function trocar2(){document.getElementById('textoDinamico').innerHTML='<span style="color:olive">eficaz<span>';setTimeout("trocar3()", 2000);} 
-function trocar3(){document.getElementById('textoDinamico').innerHTML='<span style="color:green">rápida<span>';setTimeout("trocar1()", 2000);}
+function trocar1() { document.getElementById('textoDinamico').innerHTML = '<span style="color:darkcyan">fácil<span>'; setTimeout("trocar2()", 2000); }
+function trocar2() { document.getElementById('textoDinamico').innerHTML = '<span style="color:olive">eficaz<span>'; setTimeout("trocar3()", 2000); }
+function trocar3() { document.getElementById('textoDinamico').innerHTML = '<span style="color:green">rápida<span>'; setTimeout("trocar1()", 2000); }
 /*
     //OPÇÃO1
     //function trocartxt(){const tspan=document.querySelectorAll('txtdinamico'); tspan.forEach(mostrar);}
@@ -100,25 +116,25 @@ document.addEventListener("DOMContentLoaded", () => {
     INICIO SLIDE DE PROJECTOS INTEGRADOS VISÃO MAIOR 
 -------------------------------------------------*/
 //Método extender readme
-function extender(valor){  
-    if (valor === 'readme-orkazy'){
+function extender(valor) {
+    if (valor === 'readme-orkazy') {
         document.getElementById('readme-orkazy').classList.toggle('scrollOn');
-    }else if(valor === 'readme-lucar'){
+    } else if (valor === 'readme-lucar') {
         document.getElementById('readme-lucar').classList.toggle('scrollOn');
-    }else if(valor === 'readme-portfolio-ukwally'){
+    } else if (valor === 'readme-portfolio-ukwally') {
         document.getElementById('readme-portfolio-ukwally').classList.toggle('scrollOn');
-    }else if (valor === 'readme-uninet'){
+    } else if (valor === 'readme-uninet') {
         document.getElementById('readme-uninet').classList.toggle('scrollOn');
-    }else if (valor === 'readme-finnet'){
+    } else if (valor === 'readme-finnet') {
         document.getElementById('readme-finnet').classList.toggle('scrollOn');
-    }else if(valor === 'readme-logest'){
+    } else if (valor === 'readme-logest') {
         document.getElementById('readme-logest').classList.toggle('scrollOn');
-    }else if (valor === 'readme-logo-orkazy'){
+    } else if (valor === 'readme-logo-orkazy') {
         document.getElementById('readme-logo-orkazy').classList.toggle('scrollOn');
     }
 
     // tentar fazer com iteração em um array
-    var readme = ['readme-orkazy','readme-lucar','readme-portfolio-ukwally','readme-uninet','readme-finnet'];
+    var readme = ['readme-orkazy', 'readme-lucar', 'readme-portfolio-ukwally', 'readme-uninet', 'readme-finnet'];
 }
 
 
@@ -175,43 +191,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*----------------------
   INICIO COMENTARIOS
-  -------------------*/ 
+  -------------------*/
 
-function scrollOff(){ 
+function scrollOff() {
     document.getElementById('commit-body').classList.toggle('scrollOff');
     document.getElementById('menos-commit').classList.toggle('mais-menos-commit');
     document.getElementById('mais-commit').classList.toggle('mais-menos-commit');
 }
 /*----------------------
   FIM COMENTARIOS
-  -------------------*/ 
+  -------------------*/
 
 //  DIALOGS DIALOGS DIALOGS DIALOGS DIALOGS
-function mostrarDialogo1(){document.getElementById('dialogo1').showModal(); /*document.getElementById('bodys').style="opacity: .20;"*/}
-function fecharDialogo1(){document.getElementById('dialogo1').close()}
-function mostrarDialogo2(){document.getElementById('dialogo2').showModal();}
-function fecharDialogo2(){document.getElementById('dialogo2').close()}
-function mostrarDialogo3(){document.getElementById('dialogo3').showModal();}
-function fecharDialogo3(){document.getElementById('dialogo3').close()}
-function mostrarDialogo4(){document.getElementById('dialogo4').showModal();}
-function fecharDialogo4(){document.getElementById('dialogo4').close();}
-function mostrarDialogo6(){document.getElementById('dialogo6').showModal();}
-function fecharDialogo6(){document.getElementById('dialogo6').close();}
+function mostrarDialogo1() { document.getElementById('dialogo1').showModal(); /*document.getElementById('bodys').style="opacity: .20;"*/ }
+function fecharDialogo1() { document.getElementById('dialogo1').close() }
+function mostrarDialogo2() { document.getElementById('dialogo2').showModal(); }
+function fecharDialogo2() { document.getElementById('dialogo2').close() }
+function mostrarDialogo3() { document.getElementById('dialogo3').showModal(); }
+function fecharDialogo3() { document.getElementById('dialogo3').close() }
+function mostrarDialogo4() { document.getElementById('dialogo4').showModal(); }
+function fecharDialogo4() { document.getElementById('dialogo4').close(); }
+function mostrarDialogo6() { document.getElementById('dialogo6').showModal(); }
+function fecharDialogo6() { document.getElementById('dialogo6').close(); }
 
 
 //INICIAM MENSSAGEM
-function iniciarMensagem(){
+function iniciarMensagem() {
     document.getElementById("footer-around").classList.toggle("hiddenMsgBox");
     document.getElementById("div-blur").classList.toggle("hidden");
 }
-function MostrarCampoEmail(){document.getElementById("message-head").classList.toggle("hidden");}
-function changeBoxSize(){
+function MostrarCampoEmail() { document.getElementById("message-head").classList.toggle("hidden"); }
+function changeBoxSize() {
     //descomentar isto abaixo e resolver o problema
     //document.getElementById('messagebox').style="height:100px; overflow:hidden;";
     document.getElementById('message-head').classList.remove('hidden');
 }
-function resize(){
-    document.getElementById('messagebox').style="height:; overflow:hidden";
+function resize() {
+    document.getElementById('messagebox').style = "height:; overflow:hidden";
     /* entender este código e talvez usar
       const messageHead = document.getElementById('message-head');
         const messageBox = document.getElementById('messagebox');
@@ -222,11 +238,11 @@ function resize(){
             messageHead.classList.remove('hidden');  // Remove a classe 'hidden' se estiver em foco
         }
      */
-        // Adiciona um listener para o clique fora de #div-message
-    document.addEventListener('click', function(event) {
+    // Adiciona um listener para o clique fora de #div-message
+    document.addEventListener('click', function (event) {
         const divMessage = document.getElementById('div-message');
         const messageHead = document.getElementById('message-head');
-        
+
         // Verifica se o clique foi fora de #div-message
         if (!divMessage.contains(event.target)) {
             messageHead.classList.add('hidden');
@@ -234,22 +250,23 @@ function resize(){
     });
 
 }
-function hide_Message_Head(){
+function hide_Message_Head() {
     // ou chamar este método quando for clicado fora (do divmessage (on blur?)) 
     document.getElementById('message-head').classList.add('hidden');
 }
 //FIM INICIAM MENSSAGEM
 
 
-function addLike(){
-    let like=0;
-    like=like+1;
-    document.getElementById('like').innerHTML=like;
+function addLike() {
+    let like = 0;
+    like = like + 1;
+    document.getElementById('like').innerHTML = like;
 }
-function addHate(){
-    var hate=0;
-    hate=hate+1; 
-    document.getElementById('hate').innerHTML=hate;}
+function addHate() {
+    var hate = 0;
+    hate = hate + 1;
+    document.getElementById('hate').innerHTML = hate;
+}
 /**-----------------------------
  * FIM BANNER SLIDE
  --------------------------------*/
@@ -350,19 +367,19 @@ function updateBanner() {
     switch (currentSlide) {
         case 1:
             banner.src = "./img/dev3.jpg";
-            text.innerHTML = 'Websites' + ' <style="display:none;" class="bannerTxtBr"br>'+' Eficientes';
+            text.innerHTML = 'Websites' + ' <style="display:none;" class="bannerTxtBr"br>' + ' Eficientes';
             break;
         case 2:
             banner.src = "./img/dev9.jpg";
-            text.innerHTML = 'Tutoriais'+' <style="display:none;" class="bannerTxtBr"br>'+' Sólidos';
+            text.innerHTML = 'Tutoriais' + ' <style="display:none;" class="bannerTxtBr"br>' + ' Sólidos';
             break;
         case 3:
             banner.src = "./img/dev4.jpg";
-            text.innerHTML = 'Serviços' + ' <style="display:none;" class="bannerTxtBr"br>'+'confiáveis';
+            text.innerHTML = 'Serviços' + ' <style="display:none;" class="bannerTxtBr"br>' + 'confiáveis';
             break;
         case 4:
             banner.src = "./img/dev5.jpg";
-            text.innerHTML = 'Design'+ ' <style="display:none;" class="bannerTxtBr"br>'+' gráfico';
+            text.innerHTML = 'Design' + ' <style="display:none;" class="bannerTxtBr"br>' + ' gráfico';
             break;
         case 5:
             banner.src = "./img/dev6.jpg";
@@ -370,7 +387,7 @@ function updateBanner() {
             break;
         case 6:
             banner.src = "./img/dev10.jpg";
-            text.innerHTML = 'Assistência'+ '<style="display:none;" class="bannerTxtBr"br>'+' técnica';
+            text.innerHTML = 'Assistência' + '<style="display:none;" class="bannerTxtBr"br>' + ' técnica';
             break;
         case 7:
             banner.src = "./img/dev7.jpg";

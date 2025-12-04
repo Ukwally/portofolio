@@ -1,0 +1,1234 @@
+<!-- Adicionar pagição no comentários em developmen-commit-body -->
+<!-- fazer o textarea do mssagebox oumentar de tamanho onimput e resolver o problema -->
+<Doctype HTML!>
+    <HTML lang="pt-ao">
+    <head>
+        <title>Ukwally</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
+        <link rel="stylesheet" href="./style/index.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y3YJJPJKW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3Y3YJJPJKW');
+        </script>
+    </head>
+
+    <!--body onLoad="trocar1(),abrirVG(), slide1()"-->
+    <body onLoad="trocar1(),abrirVG()">
+        <div id="div-blur" class="blur hidden"></div>
+        <div id="header">
+            <div id="upbar">
+                <p id="name">Ukwally</p>
+            </div>
+            <div id="barr"></div>
+            <div id="underbarr">
+                <p>UX/UI Design & FullStack Developer</p>
+                <button id="bt_contratar" onclick="mostrarDialogo2()">Contratar
+
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"></path>
+                    </svg>
+
+                </button>
+                   
+                
+
+
+            </div>
+        </div>
+
+        <div id="nav">
+            <div id="nav-div-menu" onclick="showMenu()"><!--img class="icon_alt" src="./icon/menu.png" alt="MENU"-->
+                <span class="icon_alt"></span> <span class="icon_alt"></span><span class="icon_alt"></span>
+            </div>
+            <div class="nav-div"><a href="#sobre"><!--img src="./icon/info.png" alt=""-->
+                    <p class="iten-nav">Sobre</p>
+                </a></div>
+            <div class="nav-div"><a href="#service">
+                    <p class="iten-nav">Serviços</p>
+                </a></div>
+            <div class="nav-div"><a href="#projectos">
+                    <p class="iten-nav">Projetos</p>
+                </a></div>
+        </div>
+
+        <section id="section-left" class="hidden">
+            <div id="div-left-top">
+                <!--div-- id="div-image"><img src="./img/user.jpg" /></!--div-->
+            </div>
+            <div id="div-left-button">
+                <small class="smalltxtmenu" style="font-size:12px; color:#436474; font-weight: 600; display:block;">MENU</small>
+                <button type="button" class="button-left" id="solicitar_servico"
+                    onclick="mostrarDialogo1('dialogo1',true) , showMenu()">Solicitar serviço<span>&#10095</span></button>
+                <a class="button-left" href="ukwally.html" onclick="showMenu()">Currículo <span>&#10095</span></a>
+                <a class="button-left" href="#development-commit" onclick="showMenu()">Comentários <span>&#10095</span></a>
+                <!--button class="button-left"> <a href="brevemente.html">Comentários</a> </button-->
+                <a class="button-left" href="#contactos" onclick="showMenu()">Contactos <span>&#10095</span></a>
+                <a class="button-left" href="ukwallyblog.html" onclick="showMenu()">Comprar<span>&#10095</span></a>
+                <a class="button-left" href="ukwallyblog.html" onclick="showMenu()">Blog <span>&#10095</span></a>
+            </div>
+        </section>
+
+        <section id="section-rigth">
+            <div id="div-body">
+                <div id="div-body-left">
+                    <!--img style="position: absolute; right:0;max-width:1470px; z-index: -0; opacity: .1;" src="./img/interfacebakgroud.jpg" alt=""-->
+                    <div id="div-banner">
+                        <!-- Adicionei o img bannerp dentro do div banner-image -->
+                        <div class="banner-image"><img id="bannerp"/></div>
+                        <!--img id="bannerp" /-->
+                        <h5>Encontre aqui:</h5>
+                        <h1 id="bannertxt"></h1>
+                        <p class="subtBanner" >Produzidos por um dedicado profissional fullstack</p>
+                        <a class="btBefore" onclick="mudarSlide(-1)">&#10094</a>
+                        <a class="btNext" onclick="mudarSlide(1)">&#10095</a>
+                    </div>
+
+                    <h1 id="txt_Benvindo" class="animado">BEM-VINDO AO MEU PORTFÓLIO</h1>
+                    <p id="txt_solicitar_portofolio" class="animado">Solicite o seu próprio portfólio <b id="textoDinamico">fácil</b>mente clicando <span><a href="#" onclick="mostrarDialogo1()">AQUI</a></span></p>
+                    <div class="description">
+                        <div class="descriptionImg">
+                            <img class="animado" src="./img/greatUkwally.png" alt="">
+                        </div>
+                        <p id="DescriptionP" class="animado">
+                            Me chame por ukwally, e seja bem-vindo ao meu portfólio , um lugar desenvolvido totalmente por
+                            mim, onde poderá interagir comigo sempre que precisar. <br>
+                            <span class="txtdespedida" style="font-family: sans-serif;">Descubra projetos e serviços.</span> <br><br>
+                            Sou Engenheiro informático e tenho muitas formações profissionais da área. <br>
+                            Sou desenvolvedor fullstack e presto serviços a empresas e também a clientes individuais. <br>
+                            Esteja à vontade para me <b><a style="text-decoration: none; color:#00566e;" href="#contactos">contactar</a></b>, eu costumo responder em pouco tempo. <br><br>
+                            Crio identidades visuais marcantes,interfaces originais e backends funcionais. <br> Com mais de 2 anos de experiência, 
+                            já trabalhei com clientes de diversos setores,desde startups até grandes empresas.
+                        </p>
+                    </div>
+                    <div class="development" id="development-services" style="margin-top: 150px;">
+                        <div class="tittle" id="service">
+                            <h2 style="font-size: 30px;">SERVIÇOS</h2>
+                        </div>
+                        <div id="group-service">
+                            <!--div-- class="serviceCard">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
+                                <div class="cardBody"> Design Gráfico <Span>.</Span> <br> <span>Ver mais <div class="detailsHidden">Crio identidades visuais marcantes.</div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </--div-->
+                            <div class="serviceCard animado">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-consulta-64.png" alt=""></div>
+                                <div class="cardBody"> Consultoria e Suporte em TI <br> <span>Ver mais <div class="detailsHidden">Dicas de especialistas em informática para impulsionar o seu negócio e prevenir ou resolver problemas. E suporte técnico de especialistas.</div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </div>
+                            <div class="serviceCard animado">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-sala-de-aula-48.png" alt=""></div>
+                                <div class="cardBody"> Aulas locais e Domiciliares <br> <span>Ver mais <div class="detailsHidden">Lógica de programação, Programação web com HTML CSS JavaScript, Banco de dados, Big data e análise de dados, Redes de computadores. <br> <b>Com certificados de formação.</b>  </div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </div>
+                            <div class="serviceCard animado">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-paginas-web-64.png" alt=""></div>
+                                <div class="cardBody">Produção de Websites <br> <span>Ver mais <div class="detailsHidden">Websites eficientes, com interfaces intuitivas. <br> <b>Prontos em pouco tempo.</b> </div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </div>
+                            <div class="serviceCard animado">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-iphone-x-50.png" alt=""> <img style="margin: 20px 0px; float:right;" src="./icon/icons8-imac-50.png" alt=""></div>
+                                <div class="cardBody">App Mobile | Desktop <br> <span>Ver mais <div class="detailsHidden">Aplicativos Desktop e Mobile para gestão de negócios específicos. Com interfaces intuitivas. <br> <b>Prontos em pouco tempo.</b> </div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </div>
+                            <!--div-- class="serviceCard">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
+                                <div class="cardBody">Consultoria em TI<Span>.</Span> <br> <span>Ver mais <div class="detailsHidden">fffffffffffff ggg</div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </!--div-->
+                            <!--div-- class="serviceCard">
+                                <div class="cardHead"> <img style="margin: 20px; float:right;" src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
+                                <div class="cardBody">Hospedagem<Span>.</Span> <br> <span>Ver mais <div class="detailsHidden"> hhhhhhhhhhhhhhhhh ppppppppppppppp </div></span></div>
+                                <div class="cardFooter"><div onclick="mostrarDialogo1()" >Solicitar  <span>&#10140</span></div></div>
+                            </!--div-->
+                        </div>
+                    </div>
+
+                    <!--INICIO card card2 de PROJETOS em minicards-->
+                    <div class="tittle" id="projectos" style=" margin: 150px 0px 0px 1%;">
+                        <h2 style="font-size: 30px;">PROJETOS</h2>
+                    </div>
+                    <span class="pjtTabHeader">
+                        <p onclick="abrirVG()" id="pjtAncor2" style="cursor: pointer;margin-left: 5%; font-size:12px; color:#334558; font-weight:600;">VISÃO SINGULAR</p>                    
+                        <p onclick="abrirVS()" id="pjtAncor1" style="cursor: pointer;margin-left: 5%; font-size:12px; color:#334558; font-weight: 600;">VISÃO GERAL</p>
+                    </span>
+                    <span id="projecSection1" style="display: none;">
+                        <div class="card2" >
+                            <div class="card-header">
+                                <div class="categoria5" data-category="all">Todos</div>
+                                <div class="categoria5" data-category="mobile">Mobile</div>
+                                <div class="categoria5" data-category="desktop">Desktop</div>
+                                <div class="categoria5" data-category="design">Design</div>
+                                <div class="categoria5" data-category="web">Web</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LUCAR</p>
+                                        <p class="subtitle">Software de identificação de viaturas.</p>
+                                    </div>
+                                </div>
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">SELISNOVA</p>
+                                        <p class="subtitle">Website empresarial</p>
+                                    </div>
+                                </div>
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">ORKAZY</p>
+                                        <p class="subtitle">Software de comércio eletrônico.</p>
+                                    </div>
+                                </div>
+                                <!--div-- class="mini-card desktop">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-imac-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LOGEST</p>
+                                        <p class="subtitle">Software de gestão logística.</p>
+                                    </div>
+                                </!--div-->
+                                <div class="mini-card web">
+                                    <div class="mini-card-head"> 
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">UKWALLY PORTFÓLIO</p>
+                                        <p class="subtitle">Portfólio pessoal de projetos.</p>
+                                    </div>
+                                </div>
+                                <!--div-- class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">UNINET</p>
+                                        <p class="subtitle">Rede social universitária.</p>
+                                    </div>
+                                </!--div-->
+                                <div class="mini-card web">
+                                    <div class="mini-card-head">
+                                        <svg name="globo" width="44" height="44" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                    </div>
+                                    <div class="mini-card-body">
+                                        <p class="title">CUTCODE</p>
+                                        <p class="subtitle">Software de simplificação de código.</p>
+                                    </div>
+                                </div>
+    
+                                <!--div-- class="mini-card mobile">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-iphone-x-50.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">FINNET</p>
+                                        <p class="subtitle">Software de finanças pessoais. </p>
+                                    </div>
+                                </!--div-->
+                                <!--div-- class="mini-card design">
+                                    <div class="mini-card-head"> <img src="./icon/icons8-personalização-do-windows10-50 - Cópia.png" alt=""></div>
+                                    <div class="mini-card-body">
+                                        <p class="title">LOGO ORKAZY</p>
+                                        <p class="subtitle">Logotipo empresarial</p>
+                                    </div>
+                                </!--div-->
+                            </div>
+                            <div class="card-footer">
+                                <form action="" method="get" onsubmit="return false;">
+                                    <button class="button" type="submit">Pesquisar projeto</button>
+                                    <input type="search" name="buscarProjecto" id="buscarProjecto" placeholder=" ">
+                                </form>
+                            </div>
+                        </div> 
+                    </span>
+                    <!--FIM card card2 de PROJETOS em minicards-->
+
+                    <!-- INICIO SLIDE  PROJETOS VISÃO UNICA-->
+                    <span id="projecSection2" style="display: none;">
+                        <div class="card card3" style="margin-bottom: 200px;">
+                            <div class="card-header">
+                                <div class="categoria5" onclick="filterProject('all')">Todos</div>
+                                <div class="categoria5" onclick="filterProject('mobile')">Mobile</div>
+                                <div class="categoria5" onclick="filterProject('desktop')">Desktop</div>
+                                <div class="categoria5" onclick="filterProject('design')">Design</div>
+                                <div class="categoria5" onclick="filterProject('web')">web</div>
+                            </div>
+                            <div class="card-body" id="project-container">
+                                <!-- Project 4 (Mobile) -->
+                                <div class="project" data-category="mobile">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/pj6.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">LUCAR</p>
+                                        <p class="subtitle">Software de identificação de viaturas</p>
+                                        <p class="text">Sistema inteligente integrado de registo e identificação automática de veículos por reconhecimento óptico de matrículas</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://github.com/Ukwally/MobileLucarApp" target="_blank">Link do projeto no Github</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://github.com/Ukwally/MobileLucarApp" target="_blank">Link do projeto</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-orkazy')">Readme</button>
+                                            <div class="txt-readme" id="readme-orkazy">
+                                                O presente sistema é sobre dois módulos de software integrados, que juntos possibilitam o acesso a dados proprietários de viaturas. <br>
+                                                Um módulo é WEB e permite registar em um banco de dados os dados da viatura e do proprietário da viatura,de modo que seja possível ver o histórico geral de proprietários que uma viatura já teve desde que foi concebida. <br>
+                                                Outro módulo é mobile e permite a  identificação automática de veículos por reconhecimento óptico de matrículas, e também retorna os dados da viatura, do proprietário atual e o histórico de todos os proprietário que a viatura já teve.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div-- class="project" data-category="mobile" >
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">FINNET</p>
+                                        <p class="subtitle">Software de finanças pessoais</p>
+                                        <p class="text">Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-lucar')">Readme</button>
+                                            <div class="txt-readme" id="readme-lucar">
+                                                Sistema inteligente integrado de gestão de finanças pessoais e educação financeira com recursos a dados financeiros pessoais reais.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!--div-- class="project" data-category="mobile">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">UNINET</p>
+                                        <p class="subtitle">Rede social universitária</p>
+                                        <p class="text">Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-uninet')">Readme</button>
+                                            <div class="txt-readme" id="readme-uninet">
+                                                Rede social que permite todos os estudantes de uma universidade comunicarem-se em um ambiente digital e realizarem diversas atividades. <br>
+                                                Permite marcar palestras, partilhas notas, acessar matéria e conhecer colegas de outros cursos. <br>
+                                                Exibe o melhor aluno da universidade automaticamente.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!-- Project 4 (Web) -->
+                                
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/selisnova2.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">SELISNOVA</p>
+                                        <p class="subtitle">Website empresarial</p>
+                                        <p class="text">Websites empresarial comercial</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://ukwally.github.io/selisnova/" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="https://ukwally.github.io/selisnova/" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
+                                            <div class="txt-readme" id="readme-portfolio-ukwally">
+                                                Websites empresarial comercial.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="./img/portfolooscreen.jpg" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">PORTFÓLIO UKWALLY</p>
+                                        <p class="subtitle">Portfólio pessoal de projetos</p>
+                                        <p class="text">Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-portfolio-ukwally')">Readme</button>
+                                            <div class="txt-readme" id="readme-portfolio-ukwally">
+                                                Websites pessoal que exibe projetos realizados, habilitações técnicas e serviços prestados do indivíduo Ukwally.
+                                                Construído com HTML, CSS e JavaScript, sem templates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project" data-category="web">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">ORKAZY</p>
+                                        <p class="subtitle">Software de Comércio eletrónico</p>
+                                        <p class="text">Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-finnet')">Readme</button>
+                                            <div class="txt-readme" id="readme-finnet">
+                                                Sistema de venda e gestão para uma empresa de comércio eletrónico e de Produção de software. <br>
+                                                Com a possibilidade de Solicitar online.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Project 4 (Desktop) -->
+                                <!--div-- class="project" data-category="desktop">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="../img/pj2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">LOGEST</p>
+                                        <p class="subtitle">Software de gestão logística</p>
+                                        <p class="text">Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-logest')">Readme</button>
+                                            <div class="txt-readme" id="readme-logest">
+                                                Software completo de gerenciamento logístico, desde a concepção, o armazenamento, o consumo, e o descarte do produto.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </!--div-->
+                                <!-- Project 4 (Design) -->
+                                <div class="project" data-category="design">
+                                    <div class="body-image">
+                                        <div class="phone">
+                                            <div class="screen">
+                                                <div class="contentScreen">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <!--div class="urderScreen"></div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-description">
+                                        <p class="title">ORKAZY LOGO</p>
+                                        <p class="subtitle">Logotipo empresarial</p>
+                                        <p class="text">Logotipo empresarial para a sua identidade visual.</p>
+                                        <div class="project-links">
+                                            <div class="project-link">
+                                                <div class="project-link-icon">
+                                                    <svg width="30" height="30" viewBox="0 0 90 90">
+                                                        <path d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank"> Gihtub Link for project</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="project-link">
+                                                <div class="project-link-icon" >
+                                                    <svg width="30" height="30"  focusable="false" role="presentation" viewBox="0 0 23 26">
+                                                        <g fill-rule="evenodd" class="wd-icon-container">
+                                                            <path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a href="#" target="_blank">Ling for project</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="project-readme">
+                                            <button class="btn btn-readme" onclick="extender('readme-logo-orkazy')">Readme</button>
+                                            <div class="txt-readme" id="readme-logo-orkazy">
+                                                Logotipo empresarial para a sua identidade visual.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-btn-direction">
+                                    <button class="btn-direction" onclick="navigate(-1)">&#10094</button>
+                                    <p class="totalProjects">1 de 5</p>
+                                    <button class="btn-direction"onclick="navigate(1)">&#10095</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </span>
+                    <!-- FIM SLIDE  projetos VISÃO UNICA-->
+
+                    <div class="development development-about" style=" margin-top: 150px;">
+                        <div class="tittle" id="sobre">
+                            <h2 style="font-size: 30px;">SOBRE MIM</h2>
+                        </div>
+                        <div class="header-about">
+                            <div><img src="./img/Ukdev.jpg" /></div>
+                        </div>
+                        <div class="aboutContent1">
+                            <h4 style="color:#485069;font-weight: 500;">
+                                Sou Engenheiro informático.
+                            </h4>
+                            <p>
+                                Atualmente trabalho como desenvolvedor de Software Full Stack. E este portfólio foi criado e é mentido por mim,
+                                para expor produtos e serviços a empregadores, clientes e entusiastas.
+                                Com as tecnologias HTML CSS e JavaScript.
+                            </p>
+                            <h4>
+                                Sobre Habilitações profissionais, eu conheço além das seguintes ferramentas tecnológicas:
+                            </h4>
+                        </div>
+                        <div class="aboutContent2 ">
+                            <ul class="lista-Habilidades">
+                                <li><div><img src="./icon/icons8-html-5-50.png" alt=""><p>HTML</p></div></li>
+                                <li><div><img src="./icon/icons8-ficheiro-css-50.png" alt=""><p>CSS</p></div></li>
+                                <li><div><img src="./icon/icons8-javascript-50.png" alt=""><p>JavaScript</p></div></li>
+                                <li><div><img src="./icon/icons8-python-50.png" alt=""><p>Python</p></div></li>
+                                <li><div><img src="./icon/icons8-sql-60.png" alt=""><p>SQL</p></div></li>
+                                <li><div><img src="./icon/icons8-laravel-50.png" alt=""><p>Laravel & Livewire</p></div></li>
+                                <li><div><img src="./icon/icons8-nativo-de-reagir-48 (1).png" alt=""><p>React.JS</p></div></li>
+                                <li><div><img src="./icon/icons8-nativo-de-reagir-48 (1).png" alt=""><p>React Native</p></div></li>
+                                <li><div><img src="./icon/icons8-nodejs-48.png" alt=""><p>Node</p></div></li>
+                                <li><div><img src="./icon/icons8-bootstrap-48.png" alt=""><p>BootStrap</p></div></li>
+                                <li><div><img src="./icon/icons8-git-48.png" alt=""><p>Git</p></div></li>
+                                <li><div><img src="./icon/icons8-github-50.png" alt=""><p>GitHub</p></div></li>
+                                <li><div><img src="./icon/icons8-wordpress-50.png" alt=""><p>Wordpress</p></div></li>
+                                <li><div><img src="./icon/icons8-c-afiado-logotipo-50.png" alt=""><p>.NET c#</p></div></li>
+                            
+                            </ul>
+                            <div>
+                                <dt style="color:#485069">
+                                    <h4>Tenho habilitação profissional para:</h4>
+                                </dt>
+                                <!--dd>Design de interface de usuário</dd>
+                                <dd>Desenvolvimento web front-end<dd-->
+                                <ul class="about-Skills-list">
+                                    <li>Administração de banco de dados</li>
+                                    <li>Produção e manutenção de Software</li>
+                                    <li>Instalação de recursos de redes de computadores,</li>
+                                    <li>Instalação e manutenção de ferramentas</li>
+                                    <li>monitoramento de componentes,etc</li>
+                                    <li>
+                                        <details open>
+                                        <div class="about-Networks">
+                                            <svg name="globo" width="24" height="24" class="wd-icon-globe wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24"><g fill-rule="evenodd" class="wd-icon-container"><path fill-rule="nonzero" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1 13H8.314c.503 2.316 1.55 4.046 2.686 4.706V15zm4.686 0H13v4.706c1.136-.661 2.183-2.39 2.686-4.705zm-9.411.001H4.582A8.028 8.028 0 0 0 7.5 18.615c-.548-1.035-.97-2.263-1.225-3.614zm13.143 0h-1.693c-.255 1.351-.677 2.579-1.226 3.615a8.03 8.03 0 0 0 2.92-3.615zm-13.298-5H4.252a8.015 8.015 0 0 0-.19 3H6.03a16.82 16.82 0 0 1 .09-3zM11 10H8.136a14.565 14.565 0 0 0-.102 3.001L11 13v-3zm4.864 0H13v3l2.966.001a14.878 14.878 0 0 0-.102-3zm3.884 0H17.88a16.557 16.557 0 0 1 .09 3l1.968.001a8.079 8.079 0 0 0-.19-3zM7.501 5.385l-.188.132A8.04 8.04 0 0 0 5.07 8H6.5c.25-.96.59-1.842 1-2.616zM8.575 8H11V4.294C10.035 4.855 9.133 6.189 8.575 8zM13 4.294L13 8h2.425c-.557-1.81-1.459-3.144-2.424-3.706zm3.499 1.09l.089.173c.37.732.679 1.554.912 2.443h1.429a8.04 8.04 0 0 0-2.43-2.615z" class="wd-icon-fill"></path></g></svg>
+                                              : WLAN  LAN  VOIP  TCP/IP 
+                                        </div>
+                                        </details>
+
+                                    </li>
+                                        
+                                </ul>
+                                <a id="bt-ver-cv" href="./ukwally.html">Ver Currículo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="commit-div" id="development-commit">
+                        <div class="tittle">
+                            <h2 style="font-size: 25px;">COMENTÁRIOS</h2>
+                            <div class="tittle-tolls">
+                                <div class="commit-number number-big-margin">+9</div> 
+                                <span id="menos-commit" onclick="scrollOff()">-</span>
+                                <span id="mais-commit" class="mais-menos-commit" onclick="scrollOff()">+</span>
+                            </div>
+                        </div>
+                        <div class="development-commit-body sombra" id="commit-body">
+                            <div class="commit-header">
+                                <div class="commit-header-info">
+                                    <p>Ordenar por
+                                        <Span>
+                                            <Select>
+                                                <option value="">Relevante</option>
+                                                <option value="">Novo</option>
+                                                <option value="">Antigo</option>
+                                            </Select>
+                                        </Span>
+                                    </p>
+                                </div>
+                                <div class="commit-button"><Button onclick="mostrarDialogo4()">Comentar</Button></div>
+                            </div>
+
+                            <div class="each-commit">
+                                <div class="commit-img">
+                                    <svg width="35" height="35" viewBox="0 0 35 35">
+                                        <g transform="translate(0)">
+                                            <path class="login-usuario"
+                                                d="M29.874,22.626a17.433,17.433,0,0,0-6.65-4.171,10.117,10.117,0,1,0-11.449,0A17.528,17.528,0,0,0,0,35H2.734a14.766,14.766,0,1,1,29.531,0H35A17.386,17.386,0,0,0,29.874,22.626ZM17.5,17.5a7.383,7.383,0,1,1,7.383-7.383A7.391,7.391,0,0,1,17.5,17.5Z"
+                                                transform="translate(0)"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="commit-top-details">
+                                    <h4 class="commit-top-detail-iten">Claudio Tavares</h4>
+                                    <p class="commit-top-detail-iten">
+                                        <svg width="12" height="12" viewBox="0 0 22 22">
+                                            <g style="fill: grey;">
+                                                <path
+                                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"
+                                                    class="wd-icon-fill"></path>
+                                                <path
+                                                    d="M10.503 14a.497.497 0 0 1-.503-.505V7.503c0-.278.214-.503.505-.503h.99c.279 0 .505.233.505.503V12h4.497c.278 0 .503.214.503.505v.99a.509.509 0 0 1-.503.505h-5.994z"
+                                                    class="wd-icon-accent"></path>
+                                            </g>
+                                        </svg>
+                                        há 2 anos
+                                    </p>
+                                </div>
+                                <div class="commit-commit">
+                                    <p>comentário</p>
+                                </div>
+                            </div>
+                            
+                            <div class="each-commit">
+                                <div class="commit-img">
+                                    <svg width="35" height="35" viewBox="0 0 35 35">
+                                        <g transform="translate(0)">
+                                            <path class="login-usuario"
+                                                d="M29.874,22.626a17.433,17.433,0,0,0-6.65-4.171,10.117,10.117,0,1,0-11.449,0A17.528,17.528,0,0,0,0,35H2.734a14.766,14.766,0,1,1,29.531,0H35A17.386,17.386,0,0,0,29.874,22.626ZM17.5,17.5a7.383,7.383,0,1,1,7.383-7.383A7.391,7.391,0,0,1,17.5,17.5Z"
+                                                transform="translate(0)"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="commit-top-details">
+                                    <h4 class="commit-top-detail-iten">Claudio Tavares</h4>
+                                    <p class="commit-top-detail-iten">
+                                        <svg width="12" height="12" viewBox="0 0 22 22">
+                                            <g style="fill: grey;">
+                                                <path
+                                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"
+                                                    class="wd-icon-fill"></path>
+                                                <path
+                                                    d="M10.503 14a.497.497 0 0 1-.503-.505V7.503c0-.278.214-.503.505-.503h.99c.279 0 .505.233.505.503V12h4.497c.278 0 .503.214.503.505v.99a.509.509 0 0 1-.503.505h-5.994z"
+                                                    class="wd-icon-accent"></path>
+                                            </g>
+                                        </svg>
+                                        há 2 anos
+                                    </p>
+                                </div>
+                                <div class="commit-commit">
+                                    <p>comentário</p>
+                                </div>
+                            </div>
+                            <div class="each-commit">
+                                <div class="commit-img">
+                                    <svg width="35" height="35" viewBox="0 0 35 35">
+                                        <g transform="translate(0)">
+                                            <path class="login-usuario"
+                                                d="M29.874,22.626a17.433,17.433,0,0,0-6.65-4.171,10.117,10.117,0,1,0-11.449,0A17.528,17.528,0,0,0,0,35H2.734a14.766,14.766,0,1,1,29.531,0H35A17.386,17.386,0,0,0,29.874,22.626ZM17.5,17.5a7.383,7.383,0,1,1,7.383-7.383A7.391,7.391,0,0,1,17.5,17.5Z"
+                                                transform="translate(0)"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="commit-top-details">
+                                    <h4 class="commit-top-detail-iten">Claudio Tavares</h4>
+                                    <p class="commit-top-detail-iten">
+                                        <svg width="12" height="12" viewBox="0 0 22 22">
+                                            <g style="fill: grey;">
+                                                <path
+                                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"
+                                                    class="wd-icon-fill"></path>
+                                                <path
+                                                    d="M10.503 14a.497.497 0 0 1-.503-.505V7.503c0-.278.214-.503.505-.503h.99c.279 0 .505.233.505.503V12h4.497c.278 0 .503.214.503.505v.99a.509.509 0 0 1-.503.505h-5.994z"
+                                                    class="wd-icon-accent"></path>
+                                            </g>
+                                        </svg>
+                                        há 2 anos
+                                    </p>
+                                </div>
+                                <div class="commit-commit">
+                                    <p>comentário</p>
+                                </div>
+                            </div>
+                            
+                            <div class="each-commit">
+                                <div class="commit-img">
+                                    <svg width="35" height="35" viewBox="0 0 35 35">
+                                        <g transform="translate(0)">
+                                            <path class="login-usuario"
+                                                d="M29.874,22.626a17.433,17.433,0,0,0-6.65-4.171,10.117,10.117,0,1,0-11.449,0A17.528,17.528,0,0,0,0,35H2.734a14.766,14.766,0,1,1,29.531,0H35A17.386,17.386,0,0,0,29.874,22.626ZM17.5,17.5a7.383,7.383,0,1,1,7.383-7.383A7.391,7.391,0,0,1,17.5,17.5Z"
+                                                transform="translate(0)"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="commit-top-details">
+                                    <h4 class="commit-top-detail-iten">Claudio Tavares</h4>
+                                    <p class="commit-top-detail-iten">
+                                        <svg width="12" height="12" viewBox="0 0 22 22">
+                                            <g style="fill: grey;">
+                                                <path
+                                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"
+                                                    class="wd-icon-fill"></path>
+                                                <path
+                                                    d="M10.503 14a.497.497 0 0 1-.503-.505V7.503c0-.278.214-.503.505-.503h.99c.279 0 .505.233.505.503V12h4.497c.278 0 .503.214.503.505v.99a.509.509 0 0 1-.503.505h-5.994z"
+                                                    class="wd-icon-accent"></path>
+                                            </g>
+                                        </svg>
+                                        há 2 anos
+                                    </p>
+                                </div>
+                                <div class="commit-commit">
+                                    <p>comentário</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="div-more-commits"><button>+</button></div>
+                    </div>   
+                    -->
+
+                    <!--div class="development" id="development-commit">
+                        <div class="tittle" id="project"><h2></h2></div>
+                    </div-->
+
+                    <div id="div_contactos">
+                        <h1>CONTACTOS</h1>
+                        <div id="contactos">
+                            <a class="iten-contacto" href="https://github.com/Ukwally/"><svg class="git-footer"
+                                    viewBox="0 0 90 90">
+                                    <path
+                                        d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394 C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585 c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307 c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775 c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449 c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972 c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651 c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169 c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951 c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988 c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771 c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976 c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5 c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989 c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="iten-contacto" href="https://www.facebook.com/"><svg viewBox="0 0 50 50">
+                                    <path
+                                        d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z" />
+                                </svg>
+                            </a>
+                            <a class="iten-contacto" href="https://www.instagram.com/ukwally"><svg viewBox="0 0 50 50">
+                                    <path
+                                        d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
+                                </svg>
+                            </a>
+                            <a class="iten-contacto" href="https://www.linkedin.com/in/ukwally">
+                                <svg viewBox="0 0 50 50">
+                                    <path
+                                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" />
+                                </svg>
+                            </a>
+                            <!--a class="iten-contacto" href=""><img src="./icon/telegram.png" alt=""></a-->
+                        </div>
+                    </div>
+                    <footer id="footer-main">
+                        <p> &copy; Copyright Portfólio <strong><span>Ukwally </span></strong> <script> document.write(new Date().getFullYear());</script> | <br id="breakFooterTxt"> Todos os Direitos Reservados</p>
+                    </footer>
+
+
+                </div>
+                <div id="div-body-rigth">publicidade</div>
+            </div>
+        </section>
+
+        <!--div-- class="share">
+            <ul>
+                <li><img src="./icon/share.png" alt=""></li>
+                <li><img src="./icon/share.png" alt=""></li>
+                <li><img src="./icon/share.png" alt=""></li>
+            </ul>
+        </div-->
+
+        <div class="share">
+            <ul>
+                <li><img src="./icon/share.png" alt=""></li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://ukwally.github.io/portofolio" target="_blank">
+                        <img src="./icon/facebook.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?url=https://ukwally.github.io/portofolio&text=Visite%20este%20site!" target="_blank">
+                        <img src="./icon/twitter.png" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/shareArticle?url=https://ukwally.github.io/portofolio&title=Veja%20este%20site!" target="_blank">
+                        <img src="./icon/linkedin2.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?text=Visite%20este%20site:%20https://ukwally.github.io/portofolio" target="_blank">
+                        <img src="./icon/whatsapp.png" alt="WhatsApp">
+                    </a>
+                </li>
+                <li>
+                    <div id="shareButton" style="cursor: pointer; display: inline-block;">
+                        <img src="./icon/icons8-globo-50.png" alt="Share">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div id="top-site" class="hidden"><a href="#name"><img name="top" src="./icon/up.png" /></a>
+            <!--svg  width="40" height="40" fill="#0c2f4b" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="i8-icon i8-button__icon" data-v-92b1d224="">
+                <path d="M5.75 3C4.24 3 3 4.24 3 5.75v3a.751.751 0 1 0 1.5 0v-3c0-.7.55-1.25 1.25-1.25h3a.751.751 0 1 0 0-1.5h-3Zm9.5 0a.751.751 0 1 0 0 1.5h3c.7 0 1.25.55 1.25 1.25v3a.751.751 0 1 0 1.5 0v-3C21 4.24 19.76 3 18.25 3h-3ZM3.738 14.49a.749.749 0 0 0-.738.76v3C3 19.76 4.24 21 5.75 21h3a.751.751 0 1 0 0-1.5h-3c-.7 0-1.25-.55-1.25-1.25v-3a.748.748 0 0 0-.762-.76Zm16.5 0a.749.749 0 0 0-.738.76v3c0 .7-.55 1.25-1.25 1.25h-3a.75.75 0 1 0 0 1.5h3c1.51 0 2.75-1.24 2.75-2.75v-3a.748.748 0 0 0-.762-.76ZM11.973 7.001a.75.75 0 0 0-.467.198l-3.25 3a.75.75 0 1 0 1.017 1.102l1.992-1.838v6.787a.751.751 0 1 0 1.5 0V9.463l1.99 1.838a.749.749 0 0 0 1.273-.577.75.75 0 0 0-.255-.525l-3.25-3a.75.75 0 0 0-.55-.198Z"></path>
+            </svg-->
+        </div>
+
+        <div id="mensagem_button" class="icon_alt" title=" mensagem" onclick="iniciarMensagem(),MostrarCampoEmail()">
+            <img name="mensagem" alt="Chat" src="./icon/msg.png" />
+            <!--i style="font-size: 40px;" class="material-icons">chat</i-->
+
+        </div>
+
+        <div id="footer">
+            <div id="footer-left">
+                <div class="likehate" name="gosto" onclick="addLike(0)">
+                    <svg x="0px" y="0px" viewBox="0 0 35 35">
+                        <path
+                            d="M17.6,26.9h-2.7c-1.6,0-2.9-1.3-2.9-2.9v-7.8c4.8-1.3,4.5-4.5,4.5-8.1c0,0,3.4-0.5,3.4,2.4v3.8h5 c1.3-0.1,2.5,1,2.6,2.3c0,0.2,0,0.4,0,0.6l-0.9,6.9c-0.3,1.7-1.7,2.9-3.3,2.9H17.6z">
+                        </path>
+                        <path
+                            d="M11.9,25.1V16c0-0.4-0.4-0.8-0.8-0.8c0,0,0,0,0,0H8.4c-0.4,0-0.8,0.4-0.8,0.8c0,0,0,0,0,0v8.7">
+                        </path>
+                    </svg>
+                    <P id="like"></P>
+                </div>
+                <div class="likehate" id="div-hate" name="odeio" onclick="addHate()">
+                    <svg class="svg-hate" x="0px" y="0px" viewBox="0 0 35 35">
+                        <path
+                            d="M17.6,26.9h-2.7c-1.6,0-2.9-1.3-2.9-2.9v-7.8c4.8-1.3,4.5-4.5,4.5-8.1c0,0,3.4-0.5,3.4,2.4v3.8h5 c1.3-0.1,2.5,1,2.6,2.3c0,0.2,0,0.4,0,0.6l-0.9,6.9c-0.3,1.7-1.7,2.9-3.3,2.9H17.6z">
+                        </path>
+                        <path
+                            d="M11.9,25.1V16c0-0.4-0.4-0.8-0.8-0.8c0,0,0,0,0,0H8.4c-0.4,0-0.8,0.4-0.8,0.8c0,0,0,0,0,0v8.7">
+                        </path>
+                    </svg>
+                    <p id="hate"></p>
+                </div>
+            </div>
+            <div id="footer-around" class="hiddenMsgBox">
+                <!--div style="position: absolute;"-->
+                <form name="fmmsg" id="div-message" action="https://formsubmit.co/ukwallyportfolio@gmail.com" method="POST">
+                    <div type="reset" class="message-icon"><img name="share"src="./icon/chat1.png" />
+                    </div>
+                    <!-- lista negra para cair no span input type="hidden" name="_blacklist" value="ganhe dinheiro rápido, clique aqui, oferta imperdível, não perca, dinheiro fácil, trabalho em casa, prêmio garantido, promoção exclusiva, sem compromisso, você ganhou, oferta limitada, oportunidade única, ganhar agora, oportunidade imperdível, você é o vencedor"-->
+                    <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
+                    <input type="hidden" name="hiddeTittleMessage" value="TITULO MENSAGENS">
+                    <input type="hidden" name="_subject" value="Novo envio:MENSAGEN">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!--button  type="reset" value="" class="message-icon" > <div><img name="share" src="./icon/message.png"/></div></button-->
+                    <textarea required placeholder="Escreva uma mensagem para mim..." name="msg" id="messagebox" oninput="changeBoxSize()" onscroll="changeBoxSize()" onmouseout="resize()"></textarea>
+                    <!--input type="submit" class="message-icon"><img name="share" src="./icon/enviar2.png"/></input-->
+                    <button name="enviar" type="submit" class="message-icon message-button "><img name="share"src="./icon/enviar2.png" /></button>
+                    <!--/div-->
+                    <div id="message-head" class="hidden sombra">
+                        <h2>Mensagem</h2>
+                        <label for="email"><small>Digite teu email Se quiser receber resposta</small></label>
+                        <input style="margin-top: 5px;" class="msgEmail" name="email" type="email" placeholder="e-mail">
+                    </div>
+                </form>
+
+            </div>
+            <div id="footer-rigth">
+                <!--div class="div-button"><img name="share" src="./icon/facebook.png" /></-div>
+                <div class="div-button"><img src="./icon/whatsapp.png" /></div>
+                <div class="div-button"><img src="./icon/instagram.png" /></div>
+                <div class="div-button"><img name="share" src="./icon/linkedin2.png" /></div>
+                <div-- class="div-button"><img src="./icon/icons8-gmail-240.png" /></div-->
+            </div>
+        </div>
+
+        <dialog id="dialogo2" class="dialog dialogShort">
+            <div class="dialog-head">
+                <p onclick="fecharDialogo2()">&#10539</p>
+            </div>
+            <div id="dialog-body">
+                <h2>Como pretende contratar <b>Ukwally</b> ?</h4>
+                    <p class="line-contract" onclick="mostrarDialogo6() ,fecharDialogo2()"><img src="./icon/email1.png" alt="">Enviar mensagem</p>
+                    <a class="line-contract" href="https://www.linkedin.com/in/ukwally"><img src="./icon/linkedin2.png" alt="">LinkedIn</a>
+                    <p class="line-contract" onclick=" fecharDialogo2(),mostrarDialogo3()"><img src="./icon/doc.png" alt=""> Formulário </p>
+
+            </div>
+        </dialog>
+
+        <dialog id="dialogo1" class="dialog dialogBig">
+            <div class="dialog-head">
+                <p onclick="fecharDialogo1()">&#10539</p>
+            </div>
+            <h2>Solicite serviços a <b>Ukwally</b> !</h4>
+
+                <form name="servicos" action="https://formsubmit.co/ukwallyportfolio@gmail.com" method="POST" class="dialog-form FormSet">
+                    <div id="main">
+                        <div id="labelone">
+                            <input type="hidden" name="hiddeTittleServicos" value="TITULO SOLICITAR SERVICOS">
+                            <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
+                            <input type="hidden" name="_subject" value="Novo envio:SERVICOS">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <input name="nome" class="longinput" required type="text"
+                                placeholder="Escreva aqui o seu nome"></input>
+                            <br>
+                            <input name="email" class="longinput" required type="email"
+                                placeholder="Escreva aqui o E-mail"></input>
+                            <br>
+                            <input name="numero" required type="number" placeholder="Escreva aqui o telemóvel"></input>
+                            <br>
+                            <select name="pais" required disabled="disabled">
+                                <option selected>Escolher País</option>
+                                <option>Angola</option>
+                                <option>Brazil</option>
+                                <option>Portugal</option>
+                                <option>Moçambique</option>
+                                <option>Outro</option>
+                            </select>
+
+                            <select name="servico" required size="1">
+                                <option>Escolher Serviço</option>
+                                <option>Software Mobile</option>
+                                <option>Software desktop</option>
+                                <option>UX / UI</option>
+                                <option>Website</option>
+                                <option spellcheck="true">Design gráfico</option>
+                                <option>Rede de computadores</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+
+
+                        <div id="labeltwo">
+                            <textarea name="descricao" required
+                                placeholder="Faça aqui uma breve descrição do que quer!..."></textarea>
+                        </div>
+                    </div>
+
+                    <div id="labeltree">
+                        <button name="Submeter" type="submit">Solicitar</button>
+                    </div>
+                </form>
+        </dialog>
+
+        <dialog id="dialogo3" class="dialog dialogBig">
+            <div class="dialog-head">
+                <p onclick="fecharDialogo3()">&#10539</p>
+            </div>
+            <h2> Formulário para contratar <b>Ukwally</b> !</h4>
+                <form name="fmcontratar" class="FormSet" action="https://formsubmit.co/ukwallyportfolio@gmail.com" method="POST">
+                    <div id="dialog-inputs-div-main">
+                        <div id="dialog-inputs-div">
+                            <input type="hidden" name="hiddeTittleContratar" value="TITULO CONTRATAR UKWALLY">
+                            <input type="hidden" name="_subject" value="Novo envio:CONTRATAR">
+                            <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input name="nome" type="text" required placeholder="Empresa"></input>
+                            <input name="agente" type="text" required placeholder="Nome do recrutador"></input>
+                            <input name="contacto" type="number" required placeholder="Contacto do recrutador"></input>
+                            <input name="email" type="email" placeholder="E-mail do recrutador"></input>
+                        </div>
+                        <!--label for="textarea">(Opcional)</label-->
+                        <textarea class="textArea" name="mensagem" rows="6"
+                            placeholder="Escreva uma mensagem para mim (opcional)"></textarea>
+                    </div>
+                    <div class="dialog-buttons-div">
+                        <!--input type="hidden" class="dialog-button" name="_next" value="file:///C:/users/ukwally/documents/elizeth/web development/portofólio/brevemente.html"></input-->
+                        <!--input name="voltar" type="button" class="dialog-button" value="Voltar" id="bt_voltar"></!--input>
+                        <input name="limpar" type="reset" class="dialog-button"></input-->
+                        <input name="Submeter" type="submit" class="dialog-button"></input>
+                    </div>
+
+
+                </form>
+        </dialog>
+
+        <dialog id="dialogo4" class="dialog dialogBig">
+            <div class="dialog-head">
+                <p onclick="fecharDialogo4()">&#10539</p>
+            </div>
+            <div id="dialog-body">
+                <h2>Faça comentários no portfólio <b>Ukwally</b>!</h4>
+                    <form name="fmcomentarios" class="dialog-form FormSet">
+                        <input type="hidden" name="_url" value="https://192.168.50.163">
+                        <input type="text" name="nome" required placeholder="Escreva o teu nome">
+                        <textarea class="textArea" name="comentario" required placeholder=" Escreva o teu comentário"></textarea>
+                        <input type="hidden" name="data" id="" value="Date();">
+                        <div class="dialog-buttons-div">
+                            <input name="submeter" type="submit" value="Comentar" class="dialog-button">
+                        </div>
+                    </form>
+            </div>
+        </dialog>
+
+        <dialog id="dialogo6" class="dialog dialogBig">
+            <div class="dialog-head">
+                <p onclick="fecharDialogo6()">&#10539</p>
+            </div>
+            <div id="dialog-body">
+                <h2>Escreva um e-mail para <b>Ukwally</b>!</h4>
+                    <form action="https://formsubmit.co/ukwallyportfolio@gmail.com" name="frmemailcontratar" method="POST">
+                        <input type="hidden" name="_next" value="https://ukwally.github.io/portofolio/obrigado.html">
+                        <input type="hidden" name="hiddeEnviarEmail" value="TITULO EMAIL ENVIADO PARA UKWALLY">
+                        <input type="hidden" name="_subject" value="Novo envio:Email">
+                        <input type="hidden" name="_captcha" value="false">
+                        <label for="nome"><small>Nome:</small></label>
+                        <input type="text" name="nome" required>
+                        <label for="email"><small>E-mail:</small></label>
+                        <input type="email" name="email" required>
+                        <label for="mensagem"><small>Mensagem:</small></label>
+                        <textarea  name="mensagem" required rows="6"></textarea>
+                        <div><button class="dialog-button" type="submit">Enviar</button></div>
+                    </form>
+            </div>
+        </dialog>
+        <script src="./js/index.js"></script>
+        <script src="./js/projectabs.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const shareButton = document.getElementById('shareButton');
+        
+                shareButton.addEventListener('click', () => {
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'Site de um programador incrível',
+                            text: 'Confira este site!',
+                            url: 'https://ukwally.github.io/portofolio',
+                        }).then(() => {
+                            console.log('compartilhado com sucesso!');
+                        }).catch((error) => {
+                            console.error('Erro ao compartilhar:', error);
+                        });
+                    } else {
+                        alert('A funcionalidade de compartilhamento não é suportada neste navegador.');
+                    }
+                });
+            });
+        </script>
+    </body>
+    </HTML>
